@@ -1,15 +1,8 @@
 "use client";
-import {
-  ComponentProps,
-  FC,
-  PropsWithChildren,
-  useEffect,
-  useMemo,
-  useState,
-} from "react";
+import { ComponentProps, FC, useEffect, useMemo, useState } from "react";
 import SlotCounter from "react-slot-counter";
 
-const weddingDate = new Date("2025-10-10");
+const weddingDate = new Date("2025-10-10T16:00:00");
 
 const Counter: FC = () => {
   const [remainingTimeInSeconds, setRemainingTime] = useState(
@@ -39,43 +32,47 @@ const Counter: FC = () => {
 
   const props = {
     sequentialAnimationMode: true,
-    duration: 0.3,
+    duration: 0.25,
     startFromLastDigit: true,
     speed: 4,
     useMonospaceWidth: true,
   } satisfies Omit<ComponentProps<typeof SlotCounter>, "value">;
 
   if (remainingTimeInSeconds <= 0) {
-    return <div>It&apos;s time!</div>;
+    return (
+      <h3 className="text-3xl animate-fadeIn font-semibold italic font-libre">
+        Elérkezett a nagy nap!
+      </h3>
+    );
   }
   return (
-    <div className="flex gap-3 text-lg items-center font-semibold">
-      <SlotCounter value={remainingDays} {...props} />
-      <SlotCounter value={remainingHours} {...props} />
-      <SlotCounter value={remainingMinutes} {...props} />
-      <SlotCounter value={remainingSeconds} {...props} />
+    <div className="flex flex-col items-center gap-5 animate-fadeInSlow">
+      <div className="flex items-center font-normal font-libre italic justify-around px-8 text-3xl ">
+        <div className="flex flex-col items-center gap-2">
+          <SlotCounter value={remainingDays} {...props} />
+          <span className="text-sm">nap</span>
+        </div>
+        <span className="mb-10 px-2.5">:</span>
+        <div className="flex flex-col items-center gap-2">
+          <SlotCounter value={remainingHours} {...props} />
+          <span className="text-sm">óra</span>
+        </div>
+        <span className="mb-10 px-2.5">:</span>
+        <div className="flex flex-col items-center gap-2">
+          <SlotCounter value={remainingMinutes} {...props} />
+          <span className="text-sm">perc</span>
+        </div>
+        <span className="mb-10 pl-2.5">:</span>
+        <div className="flex flex-col items-center gap-2 ml-[-6px]">
+          <SlotCounter value={remainingSeconds} {...props} />
+          <span className="text-sm">másodperc</span>
+        </div>
+      </div>
+      <h3 className="font-libre italic text-camouflage-green">
+        2025. október 10., Neszmély
+      </h3>
     </div>
   );
 };
 
-function ClientOnly({ children }: PropsWithChildren) {
-  const [hasMounted, setHasMounted] = useState(false);
-
-  useEffect(() => {
-    setHasMounted(true);
-  }, []);
-
-  if (!hasMounted) {
-    return null;
-  }
-
-  return children;
-}
-
-const ClientOnlyCounter = () => (
-  <ClientOnly>
-    <Counter />
-  </ClientOnly>
-);
-
-export default ClientOnlyCounter;
+export default Counter;

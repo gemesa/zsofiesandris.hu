@@ -16,12 +16,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-playfair antialiased mx-auto container p-4">
-        <PHProvider>
+      <PHProvider>
+        <body className="font-playfair antialiased mx-auto max-w-screen overflow-x-hidden overscroll-none">
           <main>{children}</main>
           <Toaster />
-        </PHProvider>
-      </body>
+        </body>
+      </PHProvider>
     </html>
   );
 }

@@ -25,19 +25,14 @@ export const submitApplication = async (
     await Promise.allSettled([
       resend.emails.send({
         from: senderEmail,
-        to: isDev
-          ? [loggingEmail]
-          : [...hostEmails, loggingEmail].filter(Boolean),
+        to: isDev ? [loggingEmail] : hostEmails.filter(Boolean),
         bcc: [loggingEmail].filter(Boolean),
         subject: "Leadott jelentkezés",
         react: AdminNotifierEmailTemplate(formData),
       }),
       resend.emails.send({
         from: senderEmail,
-        to:
-          isDev && loggingEmail
-            ? [loggingEmail]
-            : [formData.email, loggingEmail].filter(Boolean),
+        to: isDev && loggingEmail ? [loggingEmail] : [formData.email],
         bcc: [loggingEmail].filter(Boolean),
         subject: "Visszaigazolás a jelentkezésedről",
         react: AffirmationEmailTemplate(formData),
