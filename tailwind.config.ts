@@ -9,7 +9,56 @@ export default {
   ],
   theme: {
     extend: {
+      keyframes: {
+        fadeIn: {
+          "0%": {
+            opacity: "0",
+          },
+          "100%": {
+            opacity: "1",
+          },
+        },
+        fadeInSlow: {
+          "0%": {
+            opacity: "0",
+          },
+          "50%": {
+            opacity: "0",
+          },
+          "100%": {
+            opacity: "1",
+          },
+        },
+        "accordion-down": {
+          from: {
+            height: "0",
+          },
+          to: {
+            height: "var(--radix-accordion-content-height)",
+          },
+        },
+        "accordion-up": {
+          from: {
+            height: "var(--radix-accordion-content-height)",
+          },
+          to: {
+            height: "0",
+          },
+        },
+      },
+      animation: {
+        fadeIn: "fadeIn 0.5s ease-in-out",
+        fadeInSlow: "fadeInSlow 0.5s ease-in-out",
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+      },
       colors: {
+        "camouflage-green": "var(--camouflage-green)",
+        "dark-olive-green": "var(--dark-olive-green)",
+        "kombu-green": "var(--kombu-green)",
+        "dark-vanilla": "var(--dark-vanilla)",
+        copper: "var(--copper)",
+        russet: "var(--russet)",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
@@ -52,8 +101,9 @@ export default {
         },
       },
       fontFamily: {
-        playfair: ['"Playfair Display"'],
-        libre: ['"Libre Baskerville"'],
+        playfair2: ["Playfair Display SC"],
+        playfair: ["Playfair Display"],
+        libre: ["Libre Baskerville"],
       },
       borderRadius: {
         lg: "var(--radius)",

@@ -57,13 +57,8 @@ const ApplicationForm: FC = () => {
     <Form {...applicantForm}>
       <form
         onSubmit={applicantForm.handleSubmit(onSubmit)}
-        className="space-y-8"
+        className="font-libre italic flex flex-col gap-5 items-stretch w-full text-left"
       >
-        <p>
-          Megtisztelnél minket, ha velünk ünnepelnél a nagy napunkon! Kérlek
-          részvételi szándékod az alábbi űrlap kitöltésével jelezd augusztus
-          1-ig!
-        </p>
         <FormField
           control={applicantForm.control}
           name="fullName"
@@ -108,7 +103,7 @@ const ApplicationForm: FC = () => {
           name="otherGuests"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>További érkezők teljes neve</FormLabel>
+              <FormLabel>További vendégek teljes neve</FormLabel>
               <FormControl>
                 <Textarea {...field} rows={3} />
               </FormControl>
@@ -121,9 +116,7 @@ const ApplicationForm: FC = () => {
           name="foodRestrictions"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>
-                Van-e bárkinek ételérzékenysége? Ha igen, mi?
-              </FormLabel>
+              <FormLabel>Van-e ételérzékenységed? Ha igen, mi?</FormLabel>
               <FormControl>
                 <Textarea {...field} rows={3} />
               </FormControl>
@@ -140,7 +133,6 @@ const ApplicationForm: FC = () => {
                 Van bármi más, amit érdemesnek tartasz arra, hogy megoszd
                 velünk?
               </FormLabel>
-              `
               <FormControl>
                 <Textarea {...field} rows={3} />
               </FormControl>
@@ -148,11 +140,15 @@ const ApplicationForm: FC = () => {
             </FormItem>
           )}
         />
-        <Button type="submit" disabled={isPending}>
+        <Button
+          type="submit"
+          disabled={isPending}
+          className="font-libre font-normal text-lg p-5 bg-kombu-green"
+        >
           {isPending ? (
             <Loader2Icon className="text-foreground animate-spin" />
           ) : (
-            "Jelentkezés elküldése"
+            "Jelentkezem"
           )}
         </Button>
       </form>
