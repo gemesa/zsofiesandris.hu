@@ -129,10 +129,7 @@ const ApplicationForm: FC = () => {
           name="comment"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>
-                Van bármi más, amit érdemesnek tartasz arra, hogy megoszd
-                velünk?
-              </FormLabel>
+              <FormLabel>Van bármi más, amit megosztanál velünk?</FormLabel>
               <FormControl>
                 <Textarea {...field} rows={3} />
               </FormControl>
