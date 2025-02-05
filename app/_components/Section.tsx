@@ -6,8 +6,8 @@ const Section: FC<
   PropsWithChildren<{ title: string; icon?: ReactNode; className?: string }>
 > = ({ title, icon, children, className }) => {
   return (
-    <div className={cn("flex flex-col gap-6 my-12", className)}>
-      <h2 className="text-3xl gap-2.5 flex items-center justify-center font-playfair font-medium text-center leading-none">
+    <div className={cn("flex flex-col gap-6", className)}>
+      <h2 className="text-3xl gap-2 flex items-center justify-center font-playfair font-medium text-center leading-none">
         {icon}
         {title}
       </h2>
@@ -15,7 +15,7 @@ const Section: FC<
         {children}
       </div>
       <Separator
-        className="w-4/5 h-0.5 mx-auto mt-6 bg-camouflage-green rounded-sm"
+        className="w-4/5 h-0.5 mx-auto mt-6 bg-camouflage-green rounded-sm sm:hidden block"
         decorative
       />
     </div>
