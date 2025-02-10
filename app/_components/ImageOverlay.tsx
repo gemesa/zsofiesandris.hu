@@ -8,7 +8,7 @@ const Counter = dynamic(() => import("@/app/_components/Counter"), {
 
 const ImageOverlay: FC = () => {
   return (
-    <div className="absolute inset-0 flex flex-col gap-2 items-center justify-center text-kombu-green animate-fadeIn -translate-y-3">
+    <div className="absolute inset-0 flex flex-col gap-2 items-center justify-center text-kombu-green animate-fadeIn -translate-y-2 sm:-translate-y-1">
       <h1 className="text-4xl text-[42px] font-playfair sm:text-6xl text-center font-normal">
         Eszter és István
       </h1>
