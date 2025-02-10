@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <PHProvider>
-        <body className="font-playfair antialiased mx-auto max-w-screen overflow-x-hidden overscroll-none bg-dark-vanilla">
+        <body className="font-playfair text-kombu-green selection:bg-[#566235]/40 caret-kombu-green antialiased mx-auto max-w-screen overflow-x-hidden overscroll-none sm:bg-[#BFCFBB]/60 bg-[#BFCFBB]/30">
           <main>{children}</main>
           <Toaster />
         </body>

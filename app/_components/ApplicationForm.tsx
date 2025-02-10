@@ -64,9 +64,14 @@ const ApplicationForm: FC = () => {
           name="fullName"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Kitöltő teljes neve*</FormLabel>
+              <FormLabel className="text-base form-medium">
+                Kitöltő teljes neve*
+              </FormLabel>
               <FormControl>
-                <Input {...field} />
+                <Input
+                  className="border-kombu-green focus-visible:ring-kombu-green border-[1.5px] caret-kombu-green"
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -77,9 +82,15 @@ const ApplicationForm: FC = () => {
           name="phoneNumber"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Kitöltő telefonszáma*</FormLabel>
+              <FormLabel className="text-base form-medium">
+                Kitöltő telefonszáma*
+              </FormLabel>
               <FormControl>
-                <Input {...field} type="tel" />
+                <Input
+                  className="border-kombu-green focus-visible:ring-kombu-green border-[1.5px] caret-kombu-green"
+                  {...field}
+                  type="tel"
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -90,9 +101,14 @@ const ApplicationForm: FC = () => {
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Kitöltő e-mail címe*</FormLabel>
+              <FormLabel className="text-base form-medium">
+                Kitöltő e-mail címe*
+              </FormLabel>
               <FormControl>
-                <Input {...field} />
+                <Input
+                  className="border-kombu-green focus-visible:ring-kombu-green border-[1.5px] caret-kombu-green"
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -103,9 +119,15 @@ const ApplicationForm: FC = () => {
           name="otherGuests"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>További vendégek teljes neve</FormLabel>
+              <FormLabel className="text-base form-medium">
+                További vendégek teljes neve
+              </FormLabel>
               <FormControl>
-                <Textarea {...field} rows={3} />
+                <Textarea
+                  className="border-kombu-green focus-visible:ring-kombu-green border-[1.5px] caret-kombu-green"
+                  {...field}
+                  rows={3}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -116,9 +138,15 @@ const ApplicationForm: FC = () => {
           name="foodRestrictions"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Van-e ételérzékenységed? Ha igen, mi?</FormLabel>
+              <FormLabel className="text-base form-medium">
+                Van-e ételérzékenységed? Ha igen, mi?
+              </FormLabel>
               <FormControl>
-                <Textarea {...field} rows={3} />
+                <Textarea
+                  className="border-kombu-green focus-visible:ring-kombu-green border-[1.5px] caret-kombu-green"
+                  {...field}
+                  rows={3}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -129,9 +157,15 @@ const ApplicationForm: FC = () => {
           name="comment"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Van bármi más, amit megosztanál velünk?</FormLabel>
+              <FormLabel className="text-base form-medium">
+                Van bármi más, amit megosztanál velünk?
+              </FormLabel>
               <FormControl>
-                <Textarea {...field} rows={3} />
+                <Textarea
+                  className="border-kombu-green focus-visible:ring-kombu-green border-[1.5px] caret-kombu-green"
+                  {...field}
+                  rows={3}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>

@@ -40,13 +40,14 @@ const Counter: FC = () => {
 
   if (remainingTimeInSeconds <= 0) {
     return (
-      <h3 className="text-3xl animate-fadeIn font-semibold italic font-libre">
+      <h3 className="text-3xl sm:text-4xl animate-fadeIn font-normal italic font-libre">
         Elérkezett a nagy nap!
       </h3>
     );
   }
+
   return (
-    <div className="flex flex-col items-center gap-5 animate-fadeInSlow">
+    <div className="flex flex-col items-center gap-2 animate-fadeInSlow">
       <div className="flex items-center font-normal font-libre italic justify-around px-8 text-3xl ">
         <div className="flex flex-col items-center gap-2">
           <SlotCounter value={remainingDays} {...props} />
@@ -68,7 +69,7 @@ const Counter: FC = () => {
           <span className="text-sm">másodperc</span>
         </div>
       </div>
-      <h3 className="font-libre italic text-camouflage-green">
+      <h3 className="font-libre italic font-medium text-lg sm:text-base">
         2025. október 10., Neszmély
       </h3>
     </div>
