@@ -1,17 +1,7 @@
+import PHProvider from "@/app/_components/PHProvider";
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Toaster } from "sonner";
 import "./globals.css";
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
 
 export const metadata: Metadata = {
   title: "Eszter & István házasodik",
@@ -26,11 +16,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <PHProvider>
+        <body className="font-playfair text-kombu-green selection:bg-[#566235]/40 caret-kombu-green antialiased mx-auto max-w-screen overflow-x-hidden overscroll-none sm:bg-[#BFCFBB]/60 bg-[#BFCFBB]/30">
+          <main>{children}</main>
+          <Toaster />
+        </body>
+      </PHProvider>
     </html>
   );
 }
