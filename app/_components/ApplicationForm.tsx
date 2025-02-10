@@ -65,7 +65,7 @@ const ApplicationForm: FC = () => {
           render={({ field }) => (
             <FormItem>
               <FormLabel className="text-base form-medium">
-                Kitöltő teljes neve*
+                Teljes neved*
               </FormLabel>
               <FormControl>
                 <Input
@@ -83,7 +83,7 @@ const ApplicationForm: FC = () => {
           render={({ field }) => (
             <FormItem>
               <FormLabel className="text-base form-medium">
-                Kitöltő telefonszáma*
+                Telefonszámod*
               </FormLabel>
               <FormControl>
                 <Input
@@ -102,7 +102,7 @@ const ApplicationForm: FC = () => {
           render={({ field }) => (
             <FormItem>
               <FormLabel className="text-base form-medium">
-                Kitöltő e-mail címe*
+                E-mail címed*
               </FormLabel>
               <FormControl>
                 <Input

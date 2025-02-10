@@ -19,7 +19,7 @@ export default function Home() {
     <div className="flex flex-col font-playfair">
       <div className="w-full h-screen sm:h-[450px] relative">
         <Image
-          src="/trial2.jpg"
+          src="/cover.jpg"
           alt="Eszter és István esküvője"
           quality={100}
           sizes="100vw"
@@ -97,7 +97,7 @@ export default function Home() {
             />
             <div className="flex flex-col items-center my-3">
               <p className="text-2xl text-kombu-green">22:30</p>
-              <p className="text-camouflage-green text-xl">torta</p>
+              <p className="text-camouflage-green text-xl">tortavágás</p>
             </div>
             <Separator
               orientation="vertical"
@@ -159,15 +159,15 @@ export default function Home() {
           decorative
         />
         <div className="flex flex-col text-center items-center gap-6">
-          <h4 className="font-semibold text-2xl">
-            Kérdés esetén bátran keress minket az alábbi elerhetőségek egyikén!
+          <h4 className="font-semibold text-xl sm:text-2xl">
+            Kérdés esetén bátran keress minket az alábbi elérhetőségek egyikén!
           </h4>
           <div className="flex flex-col gap-2 items-center">
             <p className="text-lg font-medium italic font-libre">
-              Eszti: +36203721666
+              Eszti: +36 20 372 1666
             </p>
             <p className="text-lg font-medium italic font-libre">
-              Isti: +36707440909
+              Isti: +36 30 744 0909
             </p>
           </div>
           <p className="mt-4 flex text-xl font-semibold gap-4 flex-col items-center justify-center">

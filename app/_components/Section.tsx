@@ -7,7 +7,7 @@ const Section: FC<
 > = ({ title, icon, children, className }) => {
   return (
     <div className={cn("flex flex-col gap-6", className)}>
-      <h2 className="text-3xl gap-2 flex items-center justify-center font-playfair font-medium text-center leading-none">
+      <h2 className="text-2xl sm:text-3xl gap-2 flex items-center justify-center font-playfair font-medium text-center leading-none">
         {icon}
         {title}
       </h2>
