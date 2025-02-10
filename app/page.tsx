@@ -19,19 +19,19 @@ export default function Home() {
     <div className="flex flex-col font-playfair">
       <div className="w-full h-screen sm:h-[450px] relative">
         <Image
-          src="/cover.jpg"
+          src="/trial2.jpg"
           alt="Eszter és István esküvője"
           quality={100}
           sizes="100vw"
           priority
           fill
-          className="object-cover"
+          className="object-cover object-[center_+45%]"
         />
         <ImageOverlay />
       </div>
 
       <div className="container px-4 sm:px-10 my-8 grow pb-16 mx-auto flex-col flex gap-12">
-        <div className="gap-12 flex flex-col sm:flex-row-reverse sm:gap-4 mt-6">
+        <div className="gap-12 flex flex-col sm:flex-row sm:gap-0 mt-6">
           <Section
             icon={<BookHeart className="size-8 pt-1" />}
             title="Jelentkezés"
@@ -53,61 +53,59 @@ export default function Home() {
           >
             <Separator
               orientation="vertical"
-              className="w-0.5 h-4 bg-camouflage-green rounded-sm"
+              className="w-0.5 h-7 mt-3 bg-camouflage-green rounded-sm"
             />
-            <div className="flex flex-col items-center my-2">
-              <p className="text-xl text-kombu-green">16:00</p>
-              <p className="text-camouflage-green">
-                vendégvárás, falatkák & hideg fröccs
-              </p>
+            <div className="flex flex-col items-center my-3">
+              <p className="text-2xl text-kombu-green">16:00</p>
+              <p className="text-camouflage-green text-xl">vendégvárás</p>
             </div>
             <Separator
               orientation="vertical"
-              className="w-0.5 h-6 bg-camouflage-green rounded-sm"
+              className="w-0.5 h-7 bg-camouflage-green rounded-sm"
             />
-            <div className="flex flex-col items-center my-2">
-              <p className="text-xl text-kombu-green">16:30</p>
-              <p className="text-camouflage-green">szertartás</p>
+            <div className="flex flex-col items-center my-3">
+              <p className="text-2xl text-kombu-green">16:30</p>
+              <p className="text-camouflage-green text-xl">szertartás</p>
             </div>
             <Separator
               orientation="vertical"
-              className="w-0.5 h-6 bg-camouflage-green rounded-sm"
+              className="w-0.5 h-7 bg-camouflage-green rounded-sm"
             />
-            <div className="flex flex-col items-center my-2">
-              <p className="text-xl text-kombu-green">17:30</p>
-              <p className="text-camouflage-green">csoportképek</p>
+            <div className="flex flex-col items-center my-3">
+              <p className="text-2xl text-kombu-green">17:30</p>
+              <p className="text-camouflage-green text-xl">csoportképek</p>
             </div>
             <Separator
               orientation="vertical"
-              className="w-0.5 h-6 bg-camouflage-green rounded-sm"
+              className="w-0.5 h-7 bg-camouflage-green rounded-sm"
             />
-            <div className="flex flex-col items-center my-2">
-              <p className="text-xl text-kombu-green">18:30</p>
-              <p className="text-camouflage-green">vacsora</p>
+            <div className="flex flex-col items-center my-3">
+              <p className="text-2xl text-kombu-green">18:30</p>
+              <p className="text-camouflage-green text-xl">vacsora</p>
             </div>
             <Separator
               orientation="vertical"
-              className="w-0.5 h-6 bg-camouflage-green rounded-sm"
+              className="w-0.5 h-7 bg-camouflage-green rounded-sm"
             />
-            <div className="flex flex-col items-center my-2">
-              <p className="text-xl text-kombu-green">20:30</p>
-              <p className="text-camouflage-green">nyitótánc</p>
+            <div className="flex flex-col items-center my-3">
+              <p className="text-2xl text-kombu-green">20:30</p>
+              <p className="text-camouflage-green text-xl">nyitótánc</p>
             </div>
             <Separator
               orientation="vertical"
-              className="w-0.5 h-6 bg-camouflage-green rounded-sm"
+              className="w-0.5 h-7 bg-camouflage-green rounded-sm"
             />
-            <div className="flex flex-col items-center my-2">
-              <p className="text-xl text-kombu-green">22:30</p>
-              <p className="text-camouflage-green">torta</p>
+            <div className="flex flex-col items-center my-3">
+              <p className="text-2xl text-kombu-green">22:30</p>
+              <p className="text-camouflage-green text-xl">torta</p>
             </div>
             <Separator
               orientation="vertical"
-              className="w-0.5 h-6 bg-camouflage-green rounded-sm"
+              className="w-0.5 h-7 bg-camouflage-green rounded-sm"
             />
-            <div className="flex flex-col items-center my-2">
-              <p className="text-xl text-kombu-green">23:00</p>
-              <p className="text-camouflage-green">menyasszonytánc</p>
+            <div className="flex flex-col items-center my-3">
+              <p className="text-2xl text-kombu-green">23:00</p>
+              <p className="text-camouflage-green text-xl">menyasszonytánc</p>
             </div>
           </Section>
         </div>
@@ -117,7 +115,9 @@ export default function Home() {
         />
         <Section title="Helyszín" icon={<MapPinned className="size-8 pt-1" />}>
           <div className="flex flex-col items-center gap-5 w-full">
-            <p>Hilltop Borbirtok, 2544 Neszmély, Melegeshegy</p>
+            <p className="text-lg">
+              Hilltop Borbirtok, 2544 Neszmély, Melegeshegy
+            </p>
             <iframe
               className="h-[400px] sm:w-3/4 border-none rounded-md overflow-hidden"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d42942.3767272977!2d18.3695522066053!3d47.7252181712012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476a5aa0c613c585%3A0x56f927e22b444349!2sHilltop%20Borbirtok%20%26%20%C3%89tterem!5e0!3m2!1shu!2shu!4v1738787362258!5m2!1shu!2shu"
@@ -131,7 +131,7 @@ export default function Home() {
           className="w-full h-0.5 mt-6 bg-camouflage-green rounded-sm hidden sm:block"
           decorative
         />
-        <div className="gap-12 flex flex-col items-center justify-center sm:flex-row-reverse sm:gap-24">
+        <div className="gap-12 flex flex-col items-center sm:items-start justify-center sm:flex-row-reverse sm:gap-24">
           <Section
             title="Logisztika"
             icon={<Bus className="size-8 pt-1" />}

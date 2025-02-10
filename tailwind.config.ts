@@ -101,7 +101,6 @@ export default {
         },
       },
       fontFamily: {
-        playfair2: ["Playfair Display SC"],
         playfair: ["Playfair Display"],
         libre: ["Libre Baskerville"],
       },
