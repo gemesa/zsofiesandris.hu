@@ -53,7 +53,7 @@ export default function Home() {
           >
             <Separator
               orientation="vertical"
-              className="w-0.5 h-7 mt-3 bg-camouflage-green rounded-sm"
+              className="w-0.5 h-7 mt-2 bg-camouflage-green rounded-sm"
             />
             <div className="flex flex-col items-center my-3">
               <p className="text-2xl text-kombu-green">16:00</p>

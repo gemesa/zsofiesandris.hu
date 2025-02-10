@@ -2,18 +2,25 @@ import { WeddingApplicationFormData } from "@/app/_lib/types";
 
 const AdminNotifierEmailTemplate = (props: WeddingApplicationFormData) => (
   <div>
-    <h1>Kedves {props.fullName}!</h1>
+    <h1>Jelentkeztek esküvőre!</h1>
     <p>
-      Jelentkezésed megkaptuk, köszönjük hogy Velünk tartasz a Nagy Napunkon! A
-      weboldalt további hasznos információkkal fogjuk frissíteni, köszönjük ha
-      követed. Kérdés esetén keress bennünket bizalommal!
+      Jelentkezést adott le a következő személy:
       <br />
-      Már várjuk, hogy együtt ünnepeljünk!
+      Teljes név: {props.fullName}
       <br />
+      Email cím: {props.email}
+      <br />
+      Telefonszám: {props.phoneNumber}
+      <br />
+      További vendégek: {props.otherGuests}
+      <br />
+      Komment: {props.comment}
+      <br />
+      Érzékenység: {props.foodRestrictions}
       <br />
       Szeretettel,
       <br />
-      Eszter & István
+      Cecushka email szervere
     </p>
   </div>
 );
