@@ -108,11 +108,11 @@ export default function Home() {
         <Section title="Helyszín" icon={<MapPinned className="size-8 pt-1" />}>
           <div className="flex flex-col items-center gap-5 w-full">
             <p className="text-lg">
-              Hilltop Borbirtok, 2544 Neszmély, Melegeshegy
+              Prónay-kastély, Alsópetény
             </p>
             <iframe
               className="h-[400px] sm:w-3/4 border-none rounded-md overflow-hidden"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d42942.3767272977!2d18.3695522066053!3d47.7252181712012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476a5aa0c613c585%3A0x56f927e22b444349!2sHilltop%20Borbirtok%20%26%20%C3%89tterem!5e0!3m2!1shu!2shu!4v1738787362258!5m2!1shu!2shu"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3251.2975585740905!2d19.245165976772174!3d47.872339669588854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x474028eb9f11df6d%3A0xa602cb928f4011a0!2zUHLDs25heS1rYXN0w6lseQ!5e1!3m2!1sen!2shu!4v1758994368437!5m2!1sen!2shu"
               allowFullScreen
               loading="eager"
               referrerPolicy="no-referrer-when-downgrade"
@@ -129,8 +129,7 @@ export default function Home() {
             icon={<Bus className="size-8 pt-1" />}
             className="sm:flex-1 sm:max-w-[400px]"
           >
-            Ingyenes transzferbusz oda és vissza a szállásoktól. További
-            információ hamarosan!
+            TODO
           </Section>
           <Section
             title="Ajándék"
@@ -156,10 +155,10 @@ export default function Home() {
           </h4>
           <div className="flex flex-col gap-2 items-center">
             <p className="text-lg font-medium italic font-libre">
-              Eszti: +36 20 372 1666
+              Zsófi: TODO
             </p>
             <p className="text-lg font-medium italic font-libre">
-              Isti: +36 30 744 0909
+              Andris: TODO
             </p>
           </div>
           <p className="mt-4 flex text-xl font-semibold gap-4 flex-col items-center justify-center">
