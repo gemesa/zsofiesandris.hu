@@ -89,15 +89,15 @@ export default function Home() {
             />
             <div className="flex flex-col items-center my-3">
               <p className="text-2xl text-kombu-green">22:00</p>
-              <p className="text-camouflage-green text-xl">menyasszonytánc</p>
+              <p className="text-camouflage-green text-xl">selfie box</p>
             </div>
             <Separator
               orientation="vertical"
               className="w-0.5 h-7 bg-camouflage-green rounded-sm"
             />
             <div className="flex flex-col items-center my-3">
-              <p className="text-2xl text-kombu-green">23:00</p>
-              <p className="text-camouflage-green text-xl">selfie box</p>
+              <p className="text-2xl text-kombu-green">22:30</p>
+              <p className="text-camouflage-green text-xl">menyasszonytánc</p>
             </div>
             <Separator
               orientation="vertical"
