@@ -7,7 +7,7 @@ import { Resend } from "resend";
 
 const hostEmails = process.env.HOST_EMAILS?.split(",") || [];
 const loggingEmail = process.env.LOGGING_EMAIL || "";
-const senderEmail = "noreply@eszteresistvan.hu";
+const senderEmail = "noreply@zsofiesandris.hu";
 const resend = new Resend(process.env.RESEND_API_KEY);
 const isDev = process.env.NODE_ENV === "development";
 

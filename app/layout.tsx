@@ -7,8 +7,8 @@ import "./globals.css";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: "Eszter & István házasodik",
-    description: "2025. október 10., Neszmély",
+    title: "Zsófi & Andris házasodik",
+    description: "2026. június 13., Alsópetény",
     metadataBase: new URL(`https://${(await headers()).get("host")}`),
   };
 }
