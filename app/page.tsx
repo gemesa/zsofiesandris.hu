@@ -48,7 +48,7 @@ export default function Home() {
               className="w-0.5 h-7 mt-2 bg-camouflage-green rounded-sm"
             />
             <div className="flex flex-col items-center my-3">
-              <p className="text-2xl text-kombu-green">16:00</p>
+              <p className="text-2xl text-kombu-green">15:00</p>
               <p className="text-camouflage-green text-xl">vendégvárás</p>
             </div>
             <Separator
@@ -56,7 +56,7 @@ export default function Home() {
               className="w-0.5 h-7 bg-camouflage-green rounded-sm"
             />
             <div className="flex flex-col items-center my-3">
-              <p className="text-2xl text-kombu-green">16:30</p>
+              <p className="text-2xl text-kombu-green">16:00</p>
               <p className="text-camouflage-green text-xl">szertartás</p>
             </div>
             <Separator
@@ -64,8 +64,8 @@ export default function Home() {
               className="w-0.5 h-7 bg-camouflage-green rounded-sm"
             />
             <div className="flex flex-col items-center my-3">
-              <p className="text-2xl text-kombu-green">17:30</p>
-              <p className="text-camouflage-green text-xl">csoportképek</p>
+              <p className="text-2xl text-kombu-green">17:00</p>
+              <p className="text-camouflage-green text-xl">gratuláció, csoportképek</p>
             </div>
             <Separator
               orientation="vertical"
@@ -80,7 +80,7 @@ export default function Home() {
               className="w-0.5 h-7 bg-camouflage-green rounded-sm"
             />
             <div className="flex flex-col items-center my-3">
-              <p className="text-2xl text-kombu-green">20:30</p>
+              <p className="text-2xl text-kombu-green">20:00</p>
               <p className="text-camouflage-green text-xl">nyitótánc</p>
             </div>
             <Separator
@@ -88,8 +88,8 @@ export default function Home() {
               className="w-0.5 h-7 bg-camouflage-green rounded-sm"
             />
             <div className="flex flex-col items-center my-3">
-              <p className="text-2xl text-kombu-green">22:30</p>
-              <p className="text-camouflage-green text-xl">tortavágás</p>
+              <p className="text-2xl text-kombu-green">22:00</p>
+              <p className="text-camouflage-green text-xl">menyasszonytánc</p>
             </div>
             <Separator
               orientation="vertical"
@@ -97,7 +97,23 @@ export default function Home() {
             />
             <div className="flex flex-col items-center my-3">
               <p className="text-2xl text-kombu-green">23:00</p>
-              <p className="text-camouflage-green text-xl">menyasszonytánc</p>
+              <p className="text-camouflage-green text-xl">selfie box</p>
+            </div>
+            <Separator
+              orientation="vertical"
+              className="w-0.5 h-7 bg-camouflage-green rounded-sm"
+            />
+            <div className="flex flex-col items-center my-3">
+              <p className="text-2xl text-kombu-green">23:30</p>
+              <p className="text-camouflage-green text-xl">tortavágás</p>
+            </div>
+            <Separator
+              orientation="vertical"
+              className="w-0.5 h-7 bg-camouflage-green rounded-sm"
+            />
+            <div className="flex flex-col items-center my-3">
+              <p className="text-2xl text-kombu-green">24:00</p>
+              <p className="text-camouflage-green text-xl">buli, amíg a lábunk bírja</p>
             </div>
           </Section>
         </div>
