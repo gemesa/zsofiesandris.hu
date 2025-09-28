@@ -17,6 +17,14 @@ $ npx npm-check-updates -u
 $ npm install
 ```
 
+### Envorinment setup
+
+```
+$ cp .env.example .env
+```
+
+Then fill your actual values in `.env`.
+
 ### Build
 
 ```
