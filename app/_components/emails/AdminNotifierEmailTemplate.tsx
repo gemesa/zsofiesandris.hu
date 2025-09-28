@@ -24,7 +24,7 @@ const AdminNotifierEmailTemplate = (props: WeddingApplicationFormData) => {
         <br />
         Szeretettel,
         <br />
-        Cecushka email szervere
+        gemesa email szervere
       </p>
     </div>
   );
