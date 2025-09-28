@@ -60,4 +60,4 @@ $ npx drizzle-kit push
 - [PostHog](https://posthog.com/)
 - [Sentry](https://sentry.io/)
 - [Neon DB](https://neon.com/)
-- email server: TODO
+- [Resend](https://resend.com/)
