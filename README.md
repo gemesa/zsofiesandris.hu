@@ -49,9 +49,15 @@ $ npm run start
 $ npm audit
 ```
 
+### Create the table on the remote server
+
+```
+$ npx drizzle-kit push
+```
+
 ## Dependencies
 
 - [PostHog](https://posthog.com/)
 - [Sentry](https://sentry.io/)
-- PostgreSQL DB: TODO
+- [Neon DB](https://neon.com/)
 - email server: TODO
