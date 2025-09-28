@@ -40,3 +40,10 @@ $ npm run start
 ```
 $ npm audit
 ```
+
+## Dependencies
+
+- [PostHog](https://posthog.com/)
+- [Sentry](https://sentry.io/)
+- PostgreSQL DB: TODO
+- email server: TODO
