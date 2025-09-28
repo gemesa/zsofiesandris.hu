@@ -15,14 +15,21 @@ export const submitApplication = async (
   formData: WeddingApplicationFormData
 ) => {
   try {
+    console.log("Starting application submission...");
+    
     await addApplication(formData);
+    console.log("Application added to database successfully");
+
     if (isDev) {
-      return {
-        isSuccess: true,
-      };
+      console.log("Development mode - skipping emails");
+      return { isSuccess: true };
     }
 
-    await Promise.allSettled([
+    console.log("Sending emails...");
+    console.log("Host emails:", hostEmails);
+    console.log("Logging email:", loggingEmail);
+
+    const emailResults = await Promise.allSettled([
       resend.emails.send({
         from: senderEmail,
         to: isDev ? [loggingEmail] : hostEmails.filter(Boolean),
@@ -39,12 +46,25 @@ export const submitApplication = async (
       }),
     ]);
 
-    return {
-      isSuccess: true,
-    };
-  } catch {
-    return {
-      isSuccess: false,
+    // Log email results
+    emailResults.forEach((result, index) => {
+      if (result.status === 'fulfilled') {
+        console.log(`Email ${index + 1} sent successfully:`, result.value);
+      } else {
+        console.error(`Email ${index + 1} failed:`, result.reason);
+      }
+    });
+
+    return { isSuccess: true };
+  } catch (error) {
+    console.error("Error in submitApplication:", error);
+    
+    // Type-safe error handling
+    const errorMessage = error instanceof Error ? error.message : 'An unknown error occurred';
+    
+    return { 
+      isSuccess: false, 
+      error: errorMessage 
     };
   }
 };
