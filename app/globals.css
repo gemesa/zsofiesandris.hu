@@ -1,4 +1,6 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @layer base {
   :root {
@@ -38,15 +40,12 @@
 
 @layer base {
   * {
-    border-color: hsl(var(--border));
+    @apply border-border;
   }
   body {
-    background-color: hsl(var(--background));
-    color: hsl(var(--foreground));
+    @apply bg-background text-foreground;
   }
   a {
-    margin: 0;
-    padding: 0;
-    line-height: 1;
+    @apply m-0 p-0 leading-none;
   }
 }
