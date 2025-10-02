@@ -1,5 +1,70 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/1831ff01-5e73-45d6-b258-dfd4989b064d/deploy-status)](https://app.netlify.com/sites/eszteresistvan/deploys)
+## Our wedding page
 
-## Wedding page for friends
+https://zsofiesandris.hu
 
-https://eszteresistvan.hu
+## How to
+
+### Install packages
+
+```
+$ npm install
+```
+
+### Update packages
+
+```
+$ npx npm-check-updates -u
+$ npm install
+```
+
+### Environment setup
+
+```
+$ cp .env.example .env
+```
+
+Then fill your actual values in `.env`.
+
+### Build
+
+```
+$ npm run build
+```
+
+### Run (dev)
+
+```
+$ npm run dev
+```
+
+### Run (prod)
+
+```
+$ npm run start
+```
+
+### Report vulnerabilities
+
+```
+$ npm audit
+```
+
+### Create the table on the remote server
+
+```
+$ npx drizzle-kit push
+```
+
+### Inspect/edit the database
+
+```
+$ npx drizzle-kit studio
+```
+
+## Dependencies
+
+- [PostHog](https://posthog.com/)
+- [Sentry](https://sentry.io/)
+- [Neon DB](https://neon.com/)
+- [Domain](https://portal.rackforest.com/)
+- [Resend](https://resend.com/)

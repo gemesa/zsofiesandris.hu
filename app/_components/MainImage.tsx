@@ -9,7 +9,7 @@ const MainImage: FC = () => {
   return (
     <Image
       src="/cover.webp"
-      alt="Eszter és István esküvője"
+      alt="Zsófi és Andris esküvője"
       quality={100}
       priority
       placeholder="blur"

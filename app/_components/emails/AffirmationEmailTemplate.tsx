@@ -15,7 +15,7 @@ const AffirmationEmailTemplate = (props: WeddingApplicationFormData) => (
       <br />
       Szeretettel,
       <br />
-      Eszter & István
+      Zsófi & Andris
     </p>
   </div>
 );
