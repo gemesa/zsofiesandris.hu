@@ -55,6 +55,12 @@ $ npm audit
 $ npx drizzle-kit push
 ```
 
+### Inspect/edit the database
+
+```
+$ npx drizzle-kit studio
+```
+
 ## Dependencies
 
 - [PostHog](https://posthog.com/)
