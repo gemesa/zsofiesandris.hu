@@ -17,7 +17,7 @@ $ npx npm-check-updates -u
 $ npm install
 ```
 
-### Envorinment setup
+### Environment setup
 
 ```
 $ cp .env.example .env
