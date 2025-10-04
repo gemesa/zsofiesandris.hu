@@ -2,6 +2,10 @@
 
 https://zsofiesandris.hu
 
+## Quickstart
+
+TODO
+
 ## How to
 
 ### Install packages
@@ -68,3 +72,7 @@ $ npx drizzle-kit studio
 - [Neon DB](https://neon.com/)
 - [Domain](https://portal.rackforest.com/)
 - [Resend](https://resend.com/)
+
+## Deploy
+
+TODO
