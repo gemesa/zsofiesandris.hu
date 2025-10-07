@@ -4,7 +4,19 @@ https://zsofiesandris.hu
 
 ## Quickstart
 
-TODO
+```
+$ cp .env.example .env
+```
+
+Then fill your actual values (e.g. API keys) in `.env`.
+
+```
+$ npm install
+$ npm run build
+$ npm run start
+```
+
+Finally, open `http://localhost:3000`.
 
 ## How to
 
@@ -27,7 +39,7 @@ $ npm install
 $ cp .env.example .env
 ```
 
-Then fill your actual values in `.env`.
+Then fill your actual values (e.g. API keys) in `.env`.
 
 ### Build
 
