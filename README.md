@@ -13,7 +13,7 @@ Then fill your actual values (e.g. API keys) in `.env`.
 ```
 $ npm install
 $ npm run build
-$ npm run start
+$ npm run start-prod
 ```
 
 Finally, open `http://localhost:3000`.
