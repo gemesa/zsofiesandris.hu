@@ -1,5 +1,7 @@
 ## Our wedding page
 
+![Uptime Status](https://img.shields.io/uptimerobot/status/m801532144-8149b167f62bc39b569fe4b2)
+
 https://zsofiesandris.hu
 
 ## Quickstart
@@ -41,6 +43,8 @@ Finally, open `http://localhost:3000`.
     - point the domain to the VPS IP address (update the DNS records)
 - [Caddy](https://caddyserver.com/)
     - edit the config file (see below)
+- [UptimeRobot](https://uptimerobot.com/)
+    - create a monitor-specific API key (only used for the status badge in this README)
 
 ## Deployment
 
