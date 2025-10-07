@@ -129,6 +129,12 @@ $ sudo -u webapp npx pm2 restart wedding-app
 $ sudo -u webapp npx pm2 status
 ```
 
+Oneliner:
+
+```
+$ sudo -u webapp git fetch && sudo -u webapp git pull && sudo -u webapp npm install && sudo -u webapp npm run build && sudo -u webapp npx pm2 restart wedding-app
+```
+
 References:
 - https://deb.nodesource.com/
 - https://pm2.keymetrics.io/docs/usage/quick-start/
