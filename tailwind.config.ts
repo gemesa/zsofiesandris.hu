@@ -101,8 +101,8 @@ export default {
         },
       },
       fontFamily: {
-        playfair: ["Playfair Display"],
-        libre: ["Libre Baskerville"],
+        playfair: ["var(--font-playfair)"],
+        libre: ["var(--font-libre)"],
       },
       borderRadius: {
         lg: "var(--radius)",

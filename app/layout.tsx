@@ -17,6 +17,7 @@ const playfair = Playfair_Display({
   display: "swap",
   preload: true,
   subsets: ["latin"],
+  variable: "--font-playfair",
 });
 
 const libre = Libre_Baskerville({
@@ -25,6 +26,7 @@ const libre = Libre_Baskerville({
   preload: true,
   subsets: ["latin"],
   weight: ["400", "700"],
+  variable: "--font-libre",
 });
 
 export default function RootLayout({
@@ -33,7 +35,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${playfair.variable} ${libre.variable}`}>
       <PHProvider>
         <body className="font-playfair text-kombu-green selection:bg-[#566235]/40 caret-kombu-green antialiased mx-auto max-w-screen overflow-x-hidden overscroll-none sm:bg-[#BFCFBB]/60 bg-[#BFCFBB]/30">
           <main>{children}</main>
