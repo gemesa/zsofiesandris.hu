@@ -1,6 +1,5 @@
 import PHProvider from "@/app/_components/PHProvider";
 import type { Metadata } from "next";
-import { Libre_Baskerville, Playfair_Display } from "next/font/google";
 import { headers } from "next/headers";
 import { Toaster } from "sonner";
 import "./globals.css";
@@ -12,20 +11,6 @@ export async function generateMetadata(): Promise<Metadata> {
     metadataBase: new URL(`https://${(await headers()).get("host")}`),
   };
 }
-
-const playfair = Playfair_Display({
-  display: "swap",
-  preload: true,
-  subsets: ["latin"],
-});
-
-const libre = Libre_Baskerville({
-  display: "swap",
-  style: ["italic", "normal"],
-  preload: true,
-  subsets: ["latin"],
-  weight: ["400", "700"],
-});
 
 export default function RootLayout({
   children,
