@@ -107,7 +107,7 @@ $ npx drizzle-kit studio
 - [Caddy](https://caddyserver.com/)
     - edit the config file (see below)
 
-## Deploy
+## Deployment
 
 The server is running on a [Hostinger](https://www.hostinger.com/1) VPS.
 
