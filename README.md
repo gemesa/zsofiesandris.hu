@@ -70,6 +70,7 @@ $ chmod o+r /usr/share/keyrings/caddy-stable-archive-keyring.gpg
 $ chmod o+r /etc/apt/sources.list.d/caddy-stable.list
 $ apt update && apt upgrade -y
 $ apt install caddy
+$ # see /etc/caddy/Caddyfile below 
 $ nano /etc/caddy/Caddyfile
 $ sudo -u webapp npm install
 $ sudo -u webapp npm run build
@@ -111,6 +112,17 @@ zsofiesandris.hu {
 
 # Refer to the Caddy docs for more information:
 # https://caddyserver.com/docs/caddyfile
+```
+
+### Update, rebuild and restart the server
+
+```
+$ sudo -u webapp git fetch
+$ sudo -u webapp git pull
+$ sudo -u webapp npm install
+$ sudo -u webapp npm run build
+$ sudo -u webapp npx pm2 restart wedding-app
+$ sudo -u webapp npx pm2 status
 ```
 
 References:
