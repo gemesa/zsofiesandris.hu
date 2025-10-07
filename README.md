@@ -85,12 +85,105 @@ $ npx drizzle-kit studio
 
 ## Dependencies
 
+### Page
+
 - [PostHog](https://posthog.com/)
 - [Sentry](https://sentry.io/)
 - [Neon DB](https://neon.com/)
 - [Domain](https://portal.rackforest.com/)
 - [Resend](https://resend.com/)
 
+### Server
+
+- [Hostinger](https://www.hostinger.com/1)
+- [Caddy](https://caddyserver.com/)
+
 ## Deploy
 
-TODO
+The server is running on a [Hostinger](https://www.hostinger.com/1) VPS.
+
+```
+$ ssh root@<vps-ip> -i ~/.ssh/id_ed25519_vps
+```
+
+```
+$ apt update && apt upgrade -y
+$ reboot
+$ curl -fsSL https://deb.nodesource.com/setup_22.x | bash -
+$ apt install -y nodejs
+$ adduser --system --group --home /home/webapp webapp
+$ mkdir -p /opt/zsofiesandris.hu
+$ chown webapp:webapp /opt/zsofiesandris.hu
+$ cd /opt/zsofiesandris.hu
+$ sudo -u webapp git clone https://github.com/gemesa/zsofiesandris.hu.git .
+$ # copy `.env` from Proton Pass
+$ chmod 600 .env
+$ chown webapp:webapp .env
+$ apt install -y debian-keyring debian-archive-keyring apt-transport-https curl
+$ curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/gpg.key' | gpg --dearmor -o /usr/share/keyrings/caddy-stable-archive-keyring.gpg
+$ curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt' | tee /etc/apt/sources.list.d/caddy-stable.list
+$ chmod o+r /usr/share/keyrings/caddy-stable-archive-keyring.gpg
+$ chmod o+r /etc/apt/sources.list.d/caddy-stable.list
+$ apt update && apt upgrade -y
+$ apt install caddy
+$ nano /etc/caddy/Caddyfile
+$ sudo -u webapp npm install
+$ sudo -u webapp npm run build
+$ sudo -u webapp npm install pm2
+$ sudo -u webapp npx pm2 start "npm run start-prod" --name "wedding-app"
+$ sudo -u webapp npx pm2 save
+$ sudo -u webapp npx pm2 startup
+$ env PATH=$PATH:/usr/bin /opt/zsofiesandris.hu/node_modules/pm2/bin/pm2 startup systemd -u webapp --hp /home/webapp
+$ systemctl reload caddy
+```
+
+Note: port 80 needs to be open for Caddy while it is requesting the SSL cert.
+
+```
+$ cat /etc/caddy/Caddyfile
+# The Caddyfile is an easy way to configure your Caddy web server.
+#
+# Unless the file starts with a global options block, the first
+# uncommented line is always the address of your site.
+#
+# To use your own domain name (with automatic HTTPS), first make
+# sure your domain's A/AAAA DNS records are properly pointed to
+# this machine's public IP, then replace ":80" below with your
+# domain name.
+
+zsofiesandris.hu {
+	# Set this path to your site's directory.
+#	root * /usr/share/caddy
+
+	# Enable the static file server.
+#	file_server
+
+	# Another common task is to set up a reverse proxy:
+	reverse_proxy localhost:3000
+
+	# Or serve a PHP site through php-fpm:
+	# php_fastcgi localhost:9000
+}
+
+# Refer to the Caddy docs for more information:
+# https://caddyserver.com/docs/caddyfile
+```
+
+References:
+- https://deb.nodesource.com/
+- https://pm2.keymetrics.io/docs/usage/quick-start/
+- https://caddyserver.com/docs/install#debian-ubuntu-raspbian
+
+## Troubleshooting
+
+### Caddy
+
+```
+$ sudo journalctl -u caddy -f
+```
+
+### App
+
+```
+$ sudo -u webapp npx pm2 logs wedding-app
+```
