@@ -6,7 +6,7 @@
     "start-dev": "next dev",
     "build": "next build",
     "start-prod": "next start",
-    "lint": "next lint",
+    "lint": "next lint --max-warnings 0",
     "drizzle:studio": "npx drizzle-kit studio"
   },
   "dependencies": {
