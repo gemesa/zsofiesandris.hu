@@ -146,7 +146,7 @@ $ env PATH=$PATH:/usr/bin /opt/zsofiesandris.hu/node_modules/pm2/bin/pm2 startup
 $ systemctl reload caddy
 ```
 
-Note: port 80 needs to be open for Caddy while it is requesting the SSL cert.
+Note: port 80 and 443 [need to be open](https://caddyserver.com/docs/quick-starts/https) for Caddy while it is requesting the SSL cert.
 
 ```
 $ cat /etc/caddy/Caddyfile
