@@ -88,19 +88,30 @@ $ npx drizzle-kit studio
 ### Page
 
 - [PostHog](https://posthog.com/)
+    - create an API key
 - [Sentry](https://sentry.io/)
+    - copy the API key from the docs/tutorial
 - [Neon DB](https://neon.com/)
+    - create an EU AWS DB
 - [Domain](https://portal.rackforest.com/)
+    - register the domain
 - [Resend](https://resend.com/)
+    - connect the domain (update the DNS records)
+    - create an API key
 
 ### Server
 
 - [Hostinger](https://www.hostinger.com/1)
+    - deploy a VPS (configure FW)
 - [Caddy](https://caddyserver.com/)
+    - edit the config file (see below)
 
 ## Deploy
 
 The server is running on a [Hostinger](https://www.hostinger.com/1) VPS.
+
+Prerequisites:
+- point the domain to the VPS IP address (update the DNS records)
 
 ```
 $ ssh root@<vps-ip> -i ~/.ssh/id_ed25519_vps
