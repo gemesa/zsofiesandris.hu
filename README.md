@@ -18,71 +18,6 @@ $ npm run start-prod
 
 Finally, open `http://localhost:3000`.
 
-## Command cheatsheet
-
-### Install packages
-
-```
-$ npm install
-```
-
-### Update packages
-
-```
-$ npx npm-check-updates -u
-$ npm install
-```
-
-### Environment setup
-
-```
-$ cp .env.example .env
-```
-
-Then fill your actual values (e.g. API keys) in `.env`.
-
-### Build
-
-```
-$ npm run build
-```
-
-### Run (dev)
-
-```
-$ npm run start-dev
-```
-
-### Run (prod)
-
-```
-$ npm run start-prod
-```
-
-### Lint
-
-```
-$ npm run lint
-```
-
-### Report vulnerabilities
-
-```
-$ npm audit
-```
-
-### Create the table on the remote server
-
-```
-$ npx drizzle-kit push
-```
-
-### Inspect/edit the database
-
-```
-$ npx drizzle-kit studio
-```
-
 ## Dependencies
 
 ### Page
@@ -182,6 +117,71 @@ References:
 - https://deb.nodesource.com/
 - https://pm2.keymetrics.io/docs/usage/quick-start/
 - https://caddyserver.com/docs/install#debian-ubuntu-raspbian
+
+## Command cheatsheet
+
+### Install packages
+
+```
+$ npm install
+```
+
+### Update packages
+
+```
+$ npx npm-check-updates -u
+$ npm install
+```
+
+### Environment setup
+
+```
+$ cp .env.example .env
+```
+
+Then fill your actual values (e.g. API keys) in `.env`.
+
+### Build
+
+```
+$ npm run build
+```
+
+### Run (dev)
+
+```
+$ npm run start-dev
+```
+
+### Run (prod)
+
+```
+$ npm run start-prod
+```
+
+### Lint
+
+```
+$ npm run lint
+```
+
+### Report vulnerabilities
+
+```
+$ npm audit
+```
+
+### Create the table on the remote server
+
+```
+$ npx drizzle-kit push
+```
+
+### Inspect/edit the database
+
+```
+$ npx drizzle-kit studio
+```
 
 ## Troubleshooting
 
