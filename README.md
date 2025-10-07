@@ -135,7 +135,8 @@ Oneliner:
 $ sudo -u webapp git fetch && sudo -u webapp git pull && sudo -u webapp npm install && sudo -u webapp npm run build && sudo -u webapp npx pm2 restart wedding-app
 ```
 
-References:
+### References
+
 - https://deb.nodesource.com/
 - https://pm2.keymetrics.io/docs/usage/quick-start/
 - https://caddyserver.com/docs/install#debian-ubuntu-raspbian
