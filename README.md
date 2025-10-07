@@ -50,13 +50,13 @@ $ npm run build
 ### Run (dev)
 
 ```
-$ npm run dev
+$ npm run start-dev
 ```
 
 ### Run (prod)
 
 ```
-$ npm run start
+$ npm run start-prod
 ```
 
 ### Report vulnerabilities
