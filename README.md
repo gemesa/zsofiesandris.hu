@@ -18,7 +18,7 @@ $ npm run start-prod
 
 Finally, open `http://localhost:3000`.
 
-## How to
+## Command cheatsheet
 
 ### Install packages
 
@@ -57,6 +57,12 @@ $ npm run start-dev
 
 ```
 $ npm run start-prod
+```
+
+### Lint
+
+```
+$ npm run lint
 ```
 
 ### Report vulnerabilities
