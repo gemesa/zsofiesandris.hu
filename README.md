@@ -38,6 +38,10 @@ Finally, open `http://localhost:3000`.
     - point the domain to the VPS IP address (update the DNS records)
 - [Caddy](https://caddyserver.com/)
     - edit the config file (see below)
+- [Cloudflare](https://www.cloudflare.com/)
+    - add the domain
+    - replace the nameservers of the domain with the Cloudflare nameservers
+    - set encryption mode to `Full (strict)`
 - [UptimeRobot](https://uptimerobot.com/)
     - create a monitor-specific API key (only used for the status badge in this README)
 
