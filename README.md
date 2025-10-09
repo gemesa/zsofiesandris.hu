@@ -22,8 +22,6 @@ Finally, open `http://localhost:3000`.
 
 ## Dependencies
 
-### Page
-
 - [PostHog](https://posthog.com/)
     - create an API key
 - [Sentry](https://sentry.io/)
@@ -35,9 +33,6 @@ Finally, open `http://localhost:3000`.
 - [Resend](https://resend.com/)
     - connect the domain (update the DNS records)
     - create an API key
-
-### Server
-
 - [Hostinger](https://www.hostinger.com/1)
     - deploy a VPS (configure FW)
     - point the domain to the VPS IP address (update the DNS records)
