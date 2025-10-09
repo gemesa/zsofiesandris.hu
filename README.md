@@ -1,6 +1,6 @@
 ## Our wedding page
 
-![Uptime Status](https://img.shields.io/uptimerobot/status/m801532144-8149b167f62bc39b569fe4b2)
+[UptimeRobot](https://uptimerobot.com/): ![Uptime Status](https://img.shields.io/uptimerobot/status/m801532144-8149b167f62bc39b569fe4b2)
 
 https://zsofiesandris.hu
 
