@@ -7,9 +7,7 @@ import Section from "@/app/_components/Section";
 import { Separator } from "@radix-ui/react-separator";
 import {
   BookHeart,
-  Bus,
   CalendarHeart,
-  Gift,
   Heart,
   MapPinned,
 } from "lucide-react";
