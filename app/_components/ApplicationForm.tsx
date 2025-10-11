@@ -201,7 +201,7 @@ const ApplicationForm: FC = () => {
           <Button
             type="submit"
             disabled={isPending}
-            className="font-libre font-normal text-lg p-5 bg-kombu-green"
+            className="font-libre font-normal text-lg p-5 #E9BAB5"
           >
             {isPending ? (
               <Loader2Icon className="text-foreground animate-spin" />
@@ -213,13 +213,13 @@ const ApplicationForm: FC = () => {
       </Form>
 
 <AlertDialog open={showConfirmDialog} onOpenChange={setShowConfirmDialog}>
-  <AlertDialogContent className="font-libre max-w-md border-2 border-kombu-green bg-[#BFCFBB]/60 sm:bg-[#BFCFBB]/60">
+  <AlertDialogContent className="font-libre max-w-md border-2 #E9BAB5 bg-[#FEFEFD]/60 sm:bg-[##FEFEFD]/60">
     <AlertDialogHeader>
-      <AlertDialogTitle className="text-2xl font-playfair text-kombu-green text-center mb-2">
+      <AlertDialogTitle className="text-2xl font-playfair #E9BAB5 text-center mb-2">
         Kérjük ellenőrizd az email címed
       </AlertDialogTitle>
       <AlertDialogDescription className="space-y-4 pt-4">
-        <div className="bg-white/60 p-4 rounded-lg border border-kombu-green/30 backdrop-blur-sm">
+        <div className="bg-white/60 p-4 rounded-lg border #E9BAB5/30 backdrop-blur-sm">
           <div className="text-sm font-medium text-kombu-green mt-2 break-all">
             {pendingFormData?.email}
           </div>
@@ -232,13 +232,13 @@ const ApplicationForm: FC = () => {
     <AlertDialogFooter className="flex-col sm:flex-row gap-2 mt-4">
       <AlertDialogCancel 
         onClick={handleCancel}
-        className="font-libre border-2 border-kombu-green text-kombu-green hover:bg-kombu-green/10 bg-white/60"
+        className="font-libre border-2 #E9BAB5 text-kombu-green hover:bg-kombu-green/10 bg-white/60"
       >
         Vissza és javítás
       </AlertDialogCancel>
       <AlertDialogAction
         onClick={handleConfirm}
-        className="bg-kombu-green hover:bg-kombu-green/90 font-libre text-base px-6 text-white"
+        className="#E9BAB5 hover:#E9BAB5/90 font-libre text-base px-6 text-white"
         disabled={isPending}
       >
         {isPending ? (
