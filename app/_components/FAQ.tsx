@@ -34,12 +34,14 @@ const FAQ: FC = () => {
           <AccordionContent className="text-base sm:text-lg">
             A Kastélyban 25 standard szállodai szoba található. Az ár a reggelit is tartalmazza.
             <br /><br />
-            Árak:
-            <ul className="list-disc ml-6 mt-2 space-y-1">
-              <li>3 éves kor alatt ingyenes</li>
-              <li>Pótágyas elhelyezés: 18.500 Ft/fő/éj (pótágyak csak limitált számban elérhetőek)</li>
-              <li>Kétágyas elhelyezés kétágyas szobában: 32.600 Ft/fő/éj</li>
-            </ul>
+            <div className="text-left">
+              Árak:
+              <ul className="list-disc ml-6 mt-2 space-y-1">
+                <li>3 éves kor alatt ingyenes</li>
+                <li>Pótágyas elhelyezés: 18.500 Ft/fő/éj (pótágyak csak limitált számban elérhetőek)</li>
+                <li>Kétágyas elhelyezés kétágyas szobában: 32.600 Ft/fő/éj</li>
+              </ul>
+            </div>
             <br />
             Ezen kívül, az esküvő helyszínétől néhány perc sétára találhatóak az{" "}
             <Button
@@ -78,7 +80,7 @@ const FAQ: FC = () => {
             Parkolás
           </AccordionTrigger>
           <AccordionContent className="text-base sm:text-lg">
-            Igen, a helyszínen a Kastély parkolójában, illetve a Vendégházak előtt is biztosított a parkolás.
+            A helyszínen a Kastély parkolójában, illetve a Vendégházak előtt is biztosított a parkolás.
           </AccordionContent>
         </AccordionItem>
       </Accordion>
