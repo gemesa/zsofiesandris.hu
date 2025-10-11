@@ -80,7 +80,7 @@ export default function Home() {
             />
             <div className="flex flex-col items-center my-3">
               <p className="text-2xl text-kombu-green">20:00</p>
-              <p className="text-camouflage-green text-xl">nyitótánc + buli kezdete</p>
+              <p className="text-camouflage-green text-xl">nyitótánc és buli kezdete</p>
             </div>
             <Separator
               orientation="vertical"
