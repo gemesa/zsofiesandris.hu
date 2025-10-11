@@ -166,7 +166,7 @@ const ApplicationForm: FC = () => {
             render={({ field }) => (
               <FormItem>
                 <FormLabel className="text-base form-medium">
-                  Van-e ételérzékenységed? Ha igen, mi?
+                  Az érkezőknek van-e bármilyen ételallergiája és/vagy speciális étrendje?
                 </FormLabel>
                 <FormControl>
                   <Textarea
