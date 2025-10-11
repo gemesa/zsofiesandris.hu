@@ -105,7 +105,7 @@ $ cat /etc/caddy/Caddyfile
 # this machine's public IP, then replace ":80" below with your
 # domain name.
 
-zsofiesandris.hu {
+zsofiesandris.hu, www.zsofiesandris.hu {
 	# Set this path to your site's directory.
 #	root * /usr/share/caddy
 
@@ -142,7 +142,7 @@ Port 9000 has to be opened in the firewall settings and the Caddy config file ha
 ```
 $ cat /etc/caddy/Caddyfile
 ...
-zsofiesandris.hu {
+zsofiesandris.hu, www.zsofiesandris.hu {
 ...
 	reverse_proxy localhost:3000
 
