@@ -122,27 +122,6 @@ export default function Home() {
           className="w-full h-0.5 mt-6 bg-camouflage-green rounded-sm hidden sm:block"
           decorative
         />
-        <div className="gap-12 flex flex-col items-center sm:items-start justify-center sm:flex-row-reverse sm:gap-24">
-          <Section
-            title="Logisztika"
-            icon={<Bus className="size-8 pt-1" />}
-            className="sm:flex-1 sm:max-w-[400px]"
-          >
-            TODO
-          </Section>
-          <Section
-            title="Ajándék"
-            icon={<Gift className="size-8 pt-1" />}
-            className="sm:flex-1 sm:max-w-[400px]"
-          >
-            A legnagyobb ajándék a részvételetek, azonban ha támogatnátok közös
-            életünk kezdetét, az erre szánt összeget borítékba tegyétek!
-          </Section>
-        </div>
-        <Separator
-          className="w-full h-0.5 mt-6 bg-camouflage-green rounded-sm hidden sm:block"
-          decorative
-        />
         <FAQ />
         <Separator
           className="w-full h-0.5 mt-6 bg-camouflage-green rounded-sm hidden sm:block"
