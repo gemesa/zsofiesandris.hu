@@ -1,4 +1,6 @@
 "use client";
+import { RadioGroup, RadioGroupItem } from "@/app/_components/ui/radio-group";
+import { Label } from "@/app/_components/ui/label";
 import { Button } from "@/app/_components/ui/button";
 import {
   Form,
@@ -48,6 +50,7 @@ const ApplicationForm: FC = () => {
       midChildren: undefined,
       foodRestrictions: "",
       comment: "",
+      accomodation: undefined,
     },
   });
 
@@ -209,6 +212,77 @@ const ApplicationForm: FC = () => {
                       onChange(val === "" ? undefined : Number(val));
                     }}
                   />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={applicantForm.control}
+            name="accomodation"
+            render={({ field }) => (
+              <FormItem>
+                <div className="flex items-center justify-between">
+                  <FormLabel className="text-base form-medium">
+                    Kérjük, válaszd ki, hogy milyen szállást szeretnél!
+                  </FormLabel>
+                  {field.value && (
+                    <Button
+                      type="button"
+                      variant="ghost"
+                      size="sm"
+                      onClick={() => {
+                        field.onChange(undefined);
+                      }}
+                      className="h-auto p-1 text-xs font-libre italic text-kombu-green hover:text-kombu-green/80"
+                    >
+                      Törlés
+                    </Button>
+                  )}
+                </div>
+                <FormControl>
+                  <RadioGroup
+                    onValueChange={field.onChange}
+                    value={field.value ?? ""}
+                    className="flex flex-col space-y-2"
+                  >
+                    <div className="flex items-center space-x-2">
+                      <RadioGroupItem
+                        value="szállás0"
+                        id="szállás0"
+                        className="border-kombu-green text-kombu-green"
+                      />
+                      <Label
+                        htmlFor="szállás0"
+                        className="font-normal cursor-pointer font-libre italic">
+                        szállás0
+                      </Label>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <RadioGroupItem
+                        value="szállás1"
+                        id="szállás1"
+                        className="border-kombu-green text-kombu-green"
+                      />
+                      <Label
+                        htmlFor="szállás1"
+                        className="font-normal cursor-pointer font-libre italic">
+                        szállás1
+                      </Label>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <RadioGroupItem
+                        value="szállás2"
+                        id="szállás2"
+                        className="border-kombu-green text-kombu-green"
+                      />
+                      <Label
+                        htmlFor="szállás2"
+                        className="font-normal cursor-pointer font-libre italic">
+                        szállás2
+                      </Label>
+                    </div>
+                  </RadioGroup>
                 </FormControl>
                 <FormMessage />
               </FormItem>

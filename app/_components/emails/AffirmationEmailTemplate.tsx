@@ -45,6 +45,13 @@ const AffirmationEmailTemplate = (props: WeddingApplicationFormData) => {
             </>
           )}
 
+          {props.accomodation && (
+            <>
+              <p style={dataLabel}>Szállás:</p>
+              <p style={dataValue}>{props.accomodation}</p>
+            </>
+          )}
+
           {props.foodRestrictions && (
             <>
               <p style={dataLabel}>Ételérzékenység:</p>
