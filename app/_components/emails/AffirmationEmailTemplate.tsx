@@ -7,13 +7,7 @@ const AffirmationEmailTemplate = (props: WeddingApplicationFormData) => {
         <h1 style={heading}>Kedves {props.fullName}!</h1>
         
         <p style={paragraph}>
-          Jelentkezésed megkaptuk, köszönjük, hogy Velünk tartasz a Nagy Napunkon! 
-          A weboldalt további hasznos információkkal fogjuk frissíteni, köszönjük, 
-          ha követed. Kérdés esetén keress bennünket bizalommal!
-        </p>
-        
-        <p style={paragraph}>
-          Már várjuk, hogy együtt ünnepeljünk!
+          Jelentkezésed megkaptuk, köszönjük, hogy velünk tartasz!
         </p>
 
         <hr style={hr} />
