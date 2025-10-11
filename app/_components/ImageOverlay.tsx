@@ -13,7 +13,7 @@ const ImageOverlay: FC = () => {
         <h1 className="text-4xl text-[42px] font-playfair sm:text-6xl text-center font-normal">
           Zsófi és Andris
         </h1>
-        <h2 className="font-libre text-xl font-medium italic">nagy napja</h2>
+        <h2 className="font-libre text-xl font-medium italic">összeházasodik</h2>
       </div>
 
       <div className="w-full h-28 flex items-center justify-center">
