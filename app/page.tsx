@@ -102,6 +102,11 @@ export default function Home() {
           className="w-full h-0.5 mt-6 bg-camouflage-green rounded-sm hidden sm:block"
           decorative
         />
+        <FAQ />
+        <Separator
+          className="w-full h-0.5 mt-6 bg-camouflage-green rounded-sm hidden sm:block"
+          decorative
+        />
         <Section title="Helyszín" icon={<MapPinned className="size-8 pt-1" />}>
           <div className="flex flex-col items-center gap-5 w-full">
             <p className="text-lg">
@@ -116,11 +121,6 @@ export default function Home() {
             />
           </div>
         </Section>
-        <Separator
-          className="w-full h-0.5 mt-6 bg-camouflage-green rounded-sm hidden sm:block"
-          decorative
-        />
-        <FAQ />
         <Separator
           className="w-full h-0.5 mt-6 bg-camouflage-green rounded-sm hidden sm:block"
           decorative
