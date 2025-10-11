@@ -31,6 +31,20 @@ const AffirmationEmailTemplate = (props: WeddingApplicationFormData) => {
             </>
           )}
 
+          {(props.smallChildren ?? 0) > 0 && (
+            <>
+              <p style={dataLabel}>3 év alatti gyerekek száma:</p>
+              <p style={dataValue}>{props.smallChildren}</p>
+            </>
+          )}
+
+          {(props.midChildren ?? 0) > 0 && (
+            <>
+              <p style={dataLabel}>3 és 12 év közötti gyerekek száma:</p>
+              <p style={dataValue}>{props.midChildren}</p>
+            </>
+          )}
+
           {props.foodRestrictions && (
             <>
               <p style={dataLabel}>Ételérzékenység:</p>

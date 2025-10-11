@@ -44,6 +44,8 @@ const ApplicationForm: FC = () => {
       email: "",
       phoneNumber: "",
       otherGuests: "",
+      smallChildren: undefined,
+      midChildren: undefined,
       foodRestrictions: "",
       comment: "",
     },
@@ -154,6 +156,58 @@ const ApplicationForm: FC = () => {
                     className="border-kombu-green focus-visible:ring-kombu-green border-[1.5px] caret-kombu-green"
                     {...field}
                     rows={3}
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={applicantForm.control}
+            name="smallChildren"
+            render={({ field: { value, onChange, ...field } }) => (
+              <FormItem>
+                <FormLabel className="text-base form-medium">
+                  3 év alatti gyerekek száma
+                </FormLabel>
+                <FormControl>
+                  <Input
+                    className="border-kombu-green focus-visible:ring-kombu-green border-[1.5px] caret-kombu-green"
+                    {...field}
+                    type="number"
+                    min="0"
+                    placeholder="0"
+                    value={value ?? ""}
+                    onChange={(e) => {
+                      const val = e.target.value;
+                      onChange(val === "" ? undefined : Number(val));
+                    }}
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={applicantForm.control}
+            name="midChildren"
+            render={({ field: { value, onChange, ...field } }) => (
+              <FormItem>
+                <FormLabel className="text-base form-medium">
+                  3 és 12 év közötti gyerekek száma
+                </FormLabel>
+                <FormControl>
+                  <Input
+                    className="border-kombu-green focus-visible:ring-kombu-green border-[1.5px] caret-kombu-green"
+                    {...field}
+                    type="number"
+                    min="0"
+                    placeholder="0"
+                    value={value ?? ""}
+                    onChange={(e) => {
+                      const val = e.target.value;
+                      onChange(val === "" ? undefined : Number(val));
+                    }}
                   />
                 </FormControl>
                 <FormMessage />

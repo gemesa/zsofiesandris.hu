@@ -5,6 +5,8 @@ export const weddingApplicationSchema = z.object({
   email: z.email("Kérjük, add meg az e-mail címed!"),
   phoneNumber: z.string().nonempty("Kérjük, add meg a telefonszámod!"),
   otherGuests: z.string().optional(),
+  smallChildren: z.number().min(0, "A szám nem lehet negatív").optional(),
+  midChildren: z.number().min(0, "A szám nem lehet negatív").optional(),
   foodRestrictions: z.string().optional(),
   comment: z.string().optional(),
 });

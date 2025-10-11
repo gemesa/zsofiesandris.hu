@@ -16,6 +16,10 @@ const AdminNotifierEmailTemplate = (props: WeddingApplicationFormData) => {
         <br />
         További vendégek: {props.otherGuests || "--"}
         <br />
+        3 év alatti gyerekek {props.smallChildren ?? "--"}
+        <br />
+        3 és 12 év közötti gyerekek: {props.midChildren ?? "--"}
+        <br />
         Komment: {props.comment || "--"}
         <br />
         Érzékenység: {props.foodRestrictions || "--"}

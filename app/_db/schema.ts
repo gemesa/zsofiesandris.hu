@@ -1,4 +1,4 @@
-import { boolean, pgTable, text, timestamp, uuid } from "drizzle-orm/pg-core";
+import { boolean, integer, pgTable, text, timestamp, uuid } from "drizzle-orm/pg-core";
 
 export const applications = pgTable("applications", {
   id: uuid("id").defaultRandom().primaryKey(),
@@ -6,6 +6,8 @@ export const applications = pgTable("applications", {
   email: text("email").notNull(),
   phoneNumber: text("phoneNumber").notNull(),
   otherGuests: text("otherGuests").default("").notNull(),
+  smallChildren: integer("smallChildren").default(0).notNull(),
+  midChildren: integer("midChildren").default(0).notNull(),
   foodRestrictions: text("foodRestrictions").default("").notNull(),
   comment: text("comment").default("").notNull(),
   submittedApplicationAt: timestamp("submittedApplicationAt")
