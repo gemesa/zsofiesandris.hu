@@ -8,7 +8,7 @@ const blurDataUrl =
 const MainImage: FC = () => {
   return (
     <Image
-      src="/image1.jpg"
+      src="/image2.jpg"
       alt="Zsófi és Andris esküvője"
       quality={100}
       priority
