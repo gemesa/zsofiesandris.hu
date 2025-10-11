@@ -123,7 +123,37 @@ zsofiesandris.hu {
 # https://caddyserver.com/docs/caddyfile
 ```
 
-### Update, rebuild and restart the server
+### GitHub webhook
+
+A GitHub webhook can be configured to automatically notify the hosting server to pull the changes and rebuild the page. Use the following settings:
+
+- Payload URL: https://zsofiesandris.hu/webhook
+- Content type: application/json
+
+`webhook-listener.js` contains a basic listener implementation and can be deployed via `pm2` similarly:
+
+```
+$ sudo -u webapp npx pm2 start webhook-listener.js --name "webhook-listener"
+$ sudo -u webapp npx pm2 save
+```
+
+Port 9000 has to be opened in the firewall settings and the Caddy config file has to be updated:
+
+```
+$ cat /etc/caddy/Caddyfile
+...
+zsofiesandris.hu {
+...
+	reverse_proxy localhost:3000
+
+    handle /webhook {
+            reverse_proxy localhost:9000
+    }
+...
+}
+```
+
+Alternatively, the following commands can be used to pull the changes and rebuild the page:
 
 ```
 $ sudo -u webapp git fetch
@@ -131,7 +161,6 @@ $ sudo -u webapp git pull
 $ sudo -u webapp npm install
 $ sudo -u webapp npm run build
 $ sudo -u webapp npx pm2 restart wedding-app
-$ sudo -u webapp npx pm2 status
 ```
 
 Oneliner:
