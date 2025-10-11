@@ -224,7 +224,7 @@ const ApplicationForm: FC = () => {
               <FormItem>
                 <div className="flex items-center justify-between">
                   <FormLabel className="text-base form-medium">
-                    Kérjük, válaszd ki, hogy milyen szállást szeretnél!
+                    Szállás
                   </FormLabel>
                   {field.value && (
                     <Button
