@@ -13,7 +13,7 @@ import { FC } from "react";
 const FAQ: FC = () => {
   return (
     <Section
-      title="Kérdések és válaszok"
+      title="Hasznos tudnivalók"
       className="sm:w-4/5 mx-auto"
       icon={<CircleHelp className="sm:size-8 size-8 pt-1" />}
     >
