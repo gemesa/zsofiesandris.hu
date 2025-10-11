@@ -47,7 +47,7 @@ Finally, open `http://localhost:3000`.
     - enable feature `Page Shield` (`Overview` --> `Security`)
     - enable feature `Bot Fight Mode` (`Overview` --> `Security`)
     - ~~filter non-HU traffic (`Security` --> `Settings` --> `IP access rules`)~~: this blocks GH webhooks
-    - enable DNSSEC (`DNS` --> `Settings`)
+    - ~~enable DNSSEC (`DNS` --> `Settings`)~~: do not enable this for now
 - [UptimeRobot](https://uptimerobot.com/)
     - create a monitor-specific API key (only used for the status badge in this README)
 
