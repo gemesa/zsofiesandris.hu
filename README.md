@@ -41,7 +41,13 @@ Finally, open `http://localhost:3000`.
 - [Cloudflare](https://www.cloudflare.com/)
     - add the domain
     - replace the nameservers of the domain with the Cloudflare nameservers
-    - set encryption mode to `Full (strict)`
+    - set encryption mode to `Full (strict)` (`SSL/TLS` --> `Overview`)
+    - enable feature `Always use HTTPS` (`Overview` --> `Security`)
+    - enable feature `Automatic HTTPS Rewrites` (`Overview` --> `Security`)
+    - enable feature `Page Shield` (`Overview` --> `Security`)
+    - enable feature `Bot Fight Mode` (`Overview` --> `Security`)
+    - filter non-HU traffic (`Security` --> `Settings` --> `IP access rules`)
+    - enable DNSSEC (`DNS` --> `Settings`)
 - [UptimeRobot](https://uptimerobot.com/)
     - create a monitor-specific API key (only used for the status badge in this README)
 
