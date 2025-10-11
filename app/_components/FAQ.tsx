@@ -33,12 +33,15 @@ const FAQ: FC = () => {
           </AccordionTrigger>
           <AccordionContent className="text-base sm:text-lg">
             A Kastélyban 25 standard szállodai szoba található. Az ár a reggelit is tartalmazza.
+            <br /><br />
             Árak:
-            - 3 éves kor alatt ingyenes
-            - Pótágyas elhelyezés: 18.500 Ft/fő/éj (pótágyak csak limitált számban elérhetőek)
-            - Kétágyas elhelyezés kétágyas szobában: 32.600 Ft/fő/éj
-
-            Ezen kívül, az esküvő helyszínétől néhány perc sétára találhatóak az 
+            <ul className="list-disc ml-6 mt-2 space-y-1">
+              <li>3 éves kor alatt ingyenes</li>
+              <li>Pótágyas elhelyezés: 18.500 Ft/fő/éj (pótágyak csak limitált számban elérhetőek)</li>
+              <li>Kétágyas elhelyezés kétágyas szobában: 32.600 Ft/fő/éj</li>
+            </ul>
+            <br />
+            Ezen kívül, az esküvő helyszínétől néhány perc sétára találhatóak az{" "}
             <Button
               asChild
               variant="link"
@@ -47,19 +50,18 @@ const FAQ: FC = () => {
               <Link href="https://www.alsopetenyszallas.hu/">
                 Alsópetényi Vendégházak
               </Link>
-            </Button>, ahol összesen 22 főt tudunk elszállásolni.
-            Árak:
-            - 
+            </Button>
+            , ahol összesen 22 főt tudunk elszállásolni.
+            <br /><br />
             A szállodai szobák és a vendégházak foglalása is rajtunk keresztül történik, így kérünk, a formban jelezd, ha itt szeretnél majd megszállni.
-
           </AccordionContent>
         </AccordionItem>
-          <AccordionItem value="item-3" className="w-full">
+        <AccordionItem value="item-3" className="w-full">
           <AccordionTrigger className="sm:text-xl text-lg w-full">
             Dress code
           </AccordionTrigger>
           <AccordionContent className="text-base sm:text-lg">
-            Nyogodtan érkezhetsz bármilyen (elegáns) öltözékben, amiben jól érzed magad, azonban a fehér, piros és fekete színű ruhák kerülését kérjük.
+            Nyugodtan érkezhetsz bármilyen (elegáns) öltözékben, amiben jól érzed magad, azonban a fehér, piros és fekete színű ruhák kerülését kérjük.
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="item-4">
