@@ -216,23 +216,12 @@ const ApplicationForm: FC = () => {
   <AlertDialogContent className="font-libre max-w-md border-2 border-kombu-green bg-[#BFCFBB]/60 sm:bg-[#BFCFBB]/60">
     <AlertDialogHeader>
       <AlertDialogTitle className="text-2xl font-playfair text-kombu-green text-center mb-2">
-        Kérjük ellenőrizd az adataidat
+        Kérjük ellenőrizd az email címed
       </AlertDialogTitle>
       <AlertDialogDescription className="space-y-4 pt-4">
         <div className="bg-white/60 p-4 rounded-lg border border-kombu-green/30 backdrop-blur-sm">
-          <span className="text-sm font-bold text-kombu-green tracking-wide">
-            Email cím
-          </span>
           <div className="text-sm font-medium text-kombu-green mt-2 break-all">
             {pendingFormData?.email}
-          </div>
-        </div>
-        <div className="bg-white/60 p-4 rounded-lg border border-kombu-green/30 backdrop-blur-sm">
-          <span className="text-sm font-bold text-kombu-green tracking-wide">
-            Telefonszám
-          </span>
-          <div className="text-sm font-medium text-kombu-green mt-2">
-            {pendingFormData?.phoneNumber}
           </div>
         </div>
         <p className="text-base text-kombu-green italic text-center pt-2 font-bold">
