@@ -45,6 +45,7 @@ const ApplicationForm: FC = () => {
       fullName: "",
       email: "",
       phoneNumber: "",
+      attendance: undefined,
       otherGuests: "",
       smallChildren: undefined,
       midChildren: undefined,
@@ -53,6 +54,8 @@ const ApplicationForm: FC = () => {
       accomodation: undefined,
     },
   });
+
+  const attendanceValue = applicantForm.watch("attendance");
 
   const onSubmit = (values: WeddingApplicationFormData) => {
     setPendingFormData(values);
@@ -111,25 +114,6 @@ const ApplicationForm: FC = () => {
           />
           <FormField
             control={applicantForm.control}
-            name="phoneNumber"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel className="text-base form-medium">
-                  Telefonszám*
-                </FormLabel>
-                <FormControl>
-                  <Input
-                    className="border-kombu-green focus-visible:ring-kombu-green border-[1.5px] caret-kombu-green"
-                    {...field}
-                    type="tel"
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <FormField
-            control={applicantForm.control}
             name="email"
             render={({ field }) => (
               <FormItem>
@@ -148,93 +132,20 @@ const ApplicationForm: FC = () => {
           />
           <FormField
             control={applicantForm.control}
-            name="otherGuests"
+            name="attendance"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-base form-medium">
-                  További vendégek teljes neve
-                </FormLabel>
-                <FormControl>
-                  <Textarea
-                    className="border-kombu-green focus-visible:ring-kombu-green border-[1.5px] caret-kombu-green"
-                    {...field}
-                    rows={3}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <FormField
-            control={applicantForm.control}
-            name="smallChildren"
-            render={({ field: { value, onChange, ...field } }) => (
-              <FormItem>
-                <FormLabel className="text-base form-medium">
-                  3 év alatti gyerekek száma
-                </FormLabel>
-                <FormControl>
-                  <Input
-                    className="border-kombu-green focus-visible:ring-kombu-green border-[1.5px] caret-kombu-green"
-                    {...field}
-                    type="number"
-                    min="0"
-                    placeholder="0"
-                    value={value ?? ""}
-                    onChange={(e) => {
-                      const val = e.target.value;
-                      onChange(val === "" ? undefined : Number(val));
-                    }}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <FormField
-            control={applicantForm.control}
-            name="midChildren"
-            render={({ field: { value, onChange, ...field } }) => (
-              <FormItem>
-                <FormLabel className="text-base form-medium">
-                  3 és 12 év közötti gyerekek száma
-                </FormLabel>
-                <FormControl>
-                  <Input
-                    className="border-kombu-green focus-visible:ring-kombu-green border-[1.5px] caret-kombu-green"
-                    {...field}
-                    type="number"
-                    min="0"
-                    placeholder="0"
-                    value={value ?? ""}
-                    onChange={(e) => {
-                      const val = e.target.value;
-                      onChange(val === "" ? undefined : Number(val));
-                    }}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <FormField
-            control={applicantForm.control}
-            name="accomodation"
-            render={({ field }) => (
-              <FormItem>
-                <div className="flex items-center justify-between">
+                <div className="flex items-center justify-between gap-2">
                   <FormLabel className="text-base form-medium">
-                    Szállás
+                    Részt veszel az eseményen?*
                   </FormLabel>
                   {field.value && (
                     <Button
                       type="button"
                       variant="ghost"
                       size="sm"
-                      onClick={() => {
-                        field.onChange(undefined);
-                      }}
-                      className="h-auto p-1 text-xs font-libre italic text-kombu-green hover:text-kombu-green/80"
+                      onClick={() => field.onChange(undefined)}
+                      className="h-auto py-1 px-2 text-xs font-libre italic text-kombu-green hover:text-kombu-green/80 whitespace-nowrap flex-shrink-0"
                     >
                       Törlés
                     </Button>
@@ -247,39 +158,29 @@ const ApplicationForm: FC = () => {
                     className="flex flex-col space-y-2"
                   >
                     <div className="flex items-center space-x-2">
-                      <RadioGroupItem
-                        value="szállás0"
-                        id="szállás0"
+                      <RadioGroupItem 
+                        value="Igen" 
+                        id="Igen"
                         className="border-kombu-green text-kombu-green"
                       />
-                      <Label
-                        htmlFor="szállás0"
-                        className="font-normal cursor-pointer font-libre italic">
-                        szállás0
+                      <Label 
+                        htmlFor="Igen" 
+                        className="font-normal cursor-pointer font-libre italic"
+                      >
+                        Igen, ott leszek!
                       </Label>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <RadioGroupItem
-                        value="szállás1"
-                        id="szállás1"
+                      <RadioGroupItem 
+                        value="Nem" 
+                        id="Nem"
                         className="border-kombu-green text-kombu-green"
                       />
-                      <Label
-                        htmlFor="szállás1"
-                        className="font-normal cursor-pointer font-libre italic">
-                        szállás1
-                      </Label>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <RadioGroupItem
-                        value="szállás2"
-                        id="szállás2"
-                        className="border-kombu-green text-kombu-green"
-                      />
-                      <Label
-                        htmlFor="szállás2"
-                        className="font-normal cursor-pointer font-libre italic">
-                        szállás2
+                      <Label 
+                        htmlFor="Nem" 
+                        className="font-normal cursor-pointer font-libre italic"
+                      >
+                        Sajnos nem tudok részt venni
                       </Label>
                     </div>
                   </RadioGroup>
@@ -288,44 +189,230 @@ const ApplicationForm: FC = () => {
               </FormItem>
             )}
           />
-          <FormField
-            control={applicantForm.control}
-            name="foodRestrictions"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel className="text-base form-medium">
-                  Az érkezőknek van-e bármilyen ételallergiája és/vagy speciális étrendje?
-                </FormLabel>
-                <FormControl>
-                  <Textarea
-                    className="border-kombu-green focus-visible:ring-kombu-green border-[1.5px] caret-kombu-green"
-                    {...field}
-                    rows={3}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <FormField
-            control={applicantForm.control}
-            name="comment"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel className="text-base form-medium">
-                  Van bármi más, amit megosztanál velünk?
-                </FormLabel>
-                <FormControl>
-                  <Textarea
-                    className="border-kombu-green focus-visible:ring-kombu-green border-[1.5px] caret-kombu-green"
-                    {...field}
-                    rows={3}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
+          {attendanceValue !== "Nem" && (
+            <>
+              <FormField
+                control={applicantForm.control}
+                name="phoneNumber"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-base form-medium">
+                      Telefonszám
+                    </FormLabel>
+                    <FormControl>
+                      <Input
+                        className="border-kombu-green focus-visible:ring-kombu-green border-[1.5px] caret-kombu-green"
+                        {...field}
+                        type="tel"
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={applicantForm.control}
+                name="otherGuests"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-base form-medium">
+                      További vendégek teljes neve
+                    </FormLabel>
+                    <FormControl>
+                      <Textarea
+                        className="border-kombu-green focus-visible:ring-kombu-green border-[1.5px] caret-kombu-green"
+                        {...field}
+                        rows={3}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={applicantForm.control}
+                name="smallChildren"
+                render={({ field: { value, onChange, ...field } }) => (
+                  <FormItem>
+                    <FormLabel className="text-base form-medium">
+                      3 év alatti gyerekek száma
+                    </FormLabel>
+                    <FormControl>
+                      <Input
+                        className="border-kombu-green focus-visible:ring-kombu-green border-[1.5px] caret-kombu-green"
+                        {...field}
+                        type="number"
+                        min="0"
+                        placeholder="0"
+                        value={value ?? ""}
+                        onChange={(e) => {
+                          const val = e.target.value;
+                          onChange(val === "" ? undefined : Number(val));
+                        }}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={applicantForm.control}
+                name="midChildren"
+                render={({ field: { value, onChange, ...field } }) => (
+                  <FormItem>
+                    <FormLabel className="text-base form-medium">
+                      3 és 12 év közötti gyerekek száma
+                    </FormLabel>
+                    <FormControl>
+                      <Input
+                        className="border-kombu-green focus-visible:ring-kombu-green border-[1.5px] caret-kombu-green"
+                        {...field}
+                        type="number"
+                        min="0"
+                        placeholder="0"
+                        value={value ?? ""}
+                        onChange={(e) => {
+                          const val = e.target.value;
+                          onChange(val === "" ? undefined : Number(val));
+                        }}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={applicantForm.control}
+                name="accomodation"
+                render={({ field }) => (
+                  <FormItem>
+                    <div className="flex items-center justify-between">
+                      <FormLabel className="text-base form-medium">
+                        Szállás
+                      </FormLabel>
+                      {field.value && (
+                        <Button
+                          type="button"
+                          variant="ghost"
+                          size="sm"
+                          onClick={() => {
+                            field.onChange(undefined);
+                          }}
+                          className="h-auto p-1 text-xs font-libre italic text-kombu-green hover:text-kombu-green/80"
+                        >
+                          Törlés
+                        </Button>
+                      )}
+                    </div>
+                    <FormControl>
+                      <RadioGroup
+                        onValueChange={field.onChange}
+                        value={field.value ?? ""}
+                        className="flex flex-col space-y-2"
+                      >
+                        <div className="flex items-center space-x-2">
+                          <RadioGroupItem
+                            value="szállás0"
+                            id="szállás0"
+                            className="border-kombu-green text-kombu-green"
+                          />
+                          <Label
+                            htmlFor="szállás0"
+                            className="font-normal cursor-pointer font-libre italic">
+                            szállás0
+                          </Label>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <RadioGroupItem
+                            value="szállás1"
+                            id="szállás1"
+                            className="border-kombu-green text-kombu-green"
+                          />
+                          <Label
+                            htmlFor="szállás1"
+                            className="font-normal cursor-pointer font-libre italic">
+                            szállás1
+                          </Label>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <RadioGroupItem
+                            value="szállás2"
+                            id="szállás2"
+                            className="border-kombu-green text-kombu-green"
+                          />
+                          <Label
+                            htmlFor="szállás2"
+                            className="font-normal cursor-pointer font-libre italic">
+                            szállás2
+                          </Label>
+                        </div>
+                      </RadioGroup>
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={applicantForm.control}
+                name="foodRestrictions"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-base form-medium">
+                      Az érkezőknek van-e bármilyen ételallergiája és/vagy speciális étrendje?
+                    </FormLabel>
+                    <FormControl>
+                      <Textarea
+                        className="border-kombu-green focus-visible:ring-kombu-green border-[1.5px] caret-kombu-green"
+                        {...field}
+                        rows={3}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={applicantForm.control}
+                name="comment"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-base form-medium">
+                      Van bármi más, amit megosztanál velünk?
+                    </FormLabel>
+                    <FormControl>
+                      <Textarea
+                        className="border-kombu-green focus-visible:ring-kombu-green border-[1.5px] caret-kombu-green"
+                        {...field}
+                        rows={3}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </>
+          )}
+          {attendanceValue === "Nem" && (
+            <FormField
+              control={applicantForm.control}
+              name="comment"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className="text-base form-medium">
+                    Van bármi más, amit megosztanál velünk?
+                  </FormLabel>
+                  <FormControl>
+                    <Textarea
+                      className="border-kombu-green focus-visible:ring-kombu-green border-[1.5px] caret-kombu-green"
+                      {...field}
+                      rows={3}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          )}
           <Button
             type="submit"
             disabled={isPending}

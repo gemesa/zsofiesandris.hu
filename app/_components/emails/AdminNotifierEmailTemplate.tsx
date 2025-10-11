@@ -12,7 +12,9 @@ const AdminNotifierEmailTemplate = (props: WeddingApplicationFormData) => {
         <br />
         Email cím: {props.email}
         <br />
-        Telefonszám: {props.phoneNumber}
+        Telefonszám: {props.phoneNumber || "--"}
+        <br />
+        Részvétel: {props.attendance}
         <br />
         További vendégek: {props.otherGuests || "--"}
         <br />

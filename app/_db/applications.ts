@@ -20,6 +20,7 @@ export const addApplication = async (application: WeddingApplicationEntry) => {
   await db.insert(applications).values({
     email: application.email,
     fullName: application.fullName,
+    attendance: application.attendance,
     phoneNumber: application.phoneNumber,
     otherGuests: application.otherGuests,
     smallChildren: application.smallChildren,
