@@ -26,14 +26,13 @@ export default function Home() {
         <div className="gap-12 flex flex-col sm:flex-row sm:gap-0 mt-6">
           <Section
             icon={<BookHeart className="size-8 pt-1" />}
-            title="Jelentkezés"
+            title="Visszajelzés"
             className="sm:flex-1"
           >
             <div className="flex flex-col gap-6 sm:max-w-[400px]">
               <p className="text-base">
-                Megtisztelnél minket, ha velünk ünnepelnél a nagy napunkon!
-                Kérlek, részvételi szándékod az alábbi űrlap kitöltésével jelezd
-                augusztus 1-ig!
+                Kérjük, részvételi szándékod az alábbi űrlap kitöltésével jelezd
+                2026. március 31-ig!
               </p>
               <ApplicationForm />
             </div>
