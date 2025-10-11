@@ -34,8 +34,8 @@ const FAQ: FC = () => {
           <AccordionContent className="text-base sm:text-lg">
             A Kastélyban 25 standard szállodai szoba található. Az ár a reggelit is tartalmazza.
             <br /><br />
+                  Árak:
             <div className="text-left">
-              Árak:
               <ul className="list-disc ml-6 mt-2 space-y-1">
                 <li>3 éves kor alatt ingyenes</li>
                 <li>Pótágyas elhelyezés: 18.500 Ft/fő/éj (pótágyak csak limitált számban elérhetőek)</li>
