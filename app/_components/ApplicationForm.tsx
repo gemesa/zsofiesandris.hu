@@ -417,8 +417,8 @@ const ApplicationForm: FC = () => {
               Kérjük ellenőrizd az email címed
             </AlertDialogTitle>
             <AlertDialogDescription className="space-y-4 pt-4">
-              <div className="bg-white/60 p-4 rounded-lg border #E9BAB5/30 backdrop-blur-sm">
-                <div className="text-sm font-medium text-kombu-green mt-2 break-all">
+              <div className="bg-white/60 px-3 py-1.5 rounded-lg border border-[#E9BAB5]/30 backdrop-blur-sm">
+                <div className="text-sm font-medium text-kombu-green break-all">
                   {pendingFormData?.email}
                 </div>
               </div>
