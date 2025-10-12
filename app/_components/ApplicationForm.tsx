@@ -222,7 +222,7 @@ const ApplicationForm: FC = () => {
                       <Textarea
                         className="border-kombu-green focus-visible:ring-kombu-green border-[1.5px] caret-kombu-green"
                         {...field}
-                        rows={3}
+                        rows={2}
                       />
                     </FormControl>
                     <FormMessage />
@@ -364,7 +364,7 @@ const ApplicationForm: FC = () => {
                       <Textarea
                         className="border-kombu-green focus-visible:ring-kombu-green border-[1.5px] caret-kombu-green"
                         {...field}
-                        rows={3}
+                        rows={2}
                       />
                     </FormControl>
                     <FormMessage />
@@ -383,7 +383,7 @@ const ApplicationForm: FC = () => {
                       <Textarea
                         className="border-kombu-green focus-visible:ring-kombu-green border-[1.5px] caret-kombu-green"
                         {...field}
-                        rows={3}
+                        rows={2}
                       />
                     </FormControl>
                     <FormMessage />
@@ -405,7 +405,7 @@ const ApplicationForm: FC = () => {
                     <Textarea
                       className="border-kombu-green focus-visible:ring-kombu-green border-[1.5px] caret-kombu-green"
                       {...field}
-                      rows={3}
+                      rows={2}
                     />
                   </FormControl>
                   <FormMessage />
