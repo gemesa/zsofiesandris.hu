@@ -1,5 +1,14 @@
 import { WeddingApplicationFormData } from '@/app/_lib/types';
 
+const getAccommodationLabel = (value: string) => {
+  const labels: Record<string, string> = {
+    prónay: 'Prónay-kastély',
+    vendégház: 'Alsópetényi Vendégházak',
+    'nem-kell-szallas': 'Nem kérek szállást',
+  };
+  return labels[value] || value;
+};
+
 const AffirmationEmailTemplate = (props: WeddingApplicationFormData) => {
   return (
     <div style={main}>
@@ -53,7 +62,7 @@ const AffirmationEmailTemplate = (props: WeddingApplicationFormData) => {
           {props.accomodation && (
             <>
               <p style={dataLabel}>Szállás:</p>
-              <p style={dataValue}>{props.accomodation}</p>
+              <p style={dataValue}>{getAccommodationLabel(props.accomodation)}</p>
             </>
           )}
 
