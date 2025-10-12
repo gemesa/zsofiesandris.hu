@@ -127,7 +127,7 @@ export default function Home() {
         />
         <div className="flex flex-col text-center items-center gap-6">
           <h4 className="font-semibold text-xl sm:text-2xl">
-            Kérdés esetén bátran keress minket az alábbi elérhetőségek egyikén!
+            Kérdés esetén bátran keress minket telefonon vagy Messengeren!
           </h4>
           <div className="flex flex-col gap-2 items-center">
             <p className="text-lg font-medium italic font-libre">
