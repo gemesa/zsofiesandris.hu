@@ -1,12 +1,15 @@
-import { cn } from "@/app/_lib/utils";
-import { Separator } from "@radix-ui/react-separator";
-import { FC, PropsWithChildren, ReactNode } from "react";
+import { cn } from '@/app/_lib/utils';
+import { Separator } from '@radix-ui/react-separator';
+import { FC, PropsWithChildren, ReactNode } from 'react';
 
-const Section: FC<
-  PropsWithChildren<{ title: string; icon?: ReactNode; className?: string }>
-> = ({ title, icon, children, className }) => {
+const Section: FC<PropsWithChildren<{ title: string; icon?: ReactNode; className?: string }>> = ({
+  title,
+  icon,
+  children,
+  className,
+}) => {
   return (
-    <div className={cn("flex flex-col gap-6", className)}>
+    <div className={cn('flex flex-col gap-6', className)}>
       <h2 className="text-2xl sm:text-3xl gap-2 flex items-center justify-center font-playfair font-medium text-center leading-none">
         {icon}
         {title}

@@ -1,14 +1,12 @@
-import { WeddingApplicationFormData } from "@/app/_lib/types";
+import { WeddingApplicationFormData } from '@/app/_lib/types';
 
 const AffirmationEmailTemplate = (props: WeddingApplicationFormData) => {
   return (
     <div style={main}>
       <div style={container}>
         <h1 style={heading}>Kedves {props.fullName}!</h1>
-        
-        <p style={paragraph}>
-          Jelentkezésed megkaptuk, köszönjük, hogy velünk tartasz!
-        </p>
+
+        <p style={paragraph}>Jelentkezésed megkaptuk, köszönjük, hogy velünk tartasz!</p>
 
         <hr style={hr} />
 
@@ -23,8 +21,8 @@ const AffirmationEmailTemplate = (props: WeddingApplicationFormData) => {
 
           {props.phoneNumber && (
             <>
-          <p style={dataLabel}>Telefonszám:</p>
-          <p style={dataValue}>{props.phoneNumber}</p>
+              <p style={dataLabel}>Telefonszám:</p>
+              <p style={dataValue}>{props.phoneNumber}</p>
             </>
           )}
 
@@ -77,12 +75,13 @@ const AffirmationEmailTemplate = (props: WeddingApplicationFormData) => {
         <hr style={hr} />
 
         <p style={paragraph}>
-          Ha bármit módosítani szeretnél az adataidon, kérlek vedd fel 
-          velünk a kapcsolatot a lehető leghamarabb.
+          Ha bármit módosítani szeretnél az adataidon, kérlek vedd fel velünk a kapcsolatot a lehető
+          leghamarabb.
         </p>
 
         <p style={signature}>
-          Szeretettel,<br />
+          Szeretettel,
+          <br />
           Zsófi & Andris
         </p>
       </div>
@@ -94,79 +93,80 @@ export default AffirmationEmailTemplate;
 
 // Styles
 const main = {
-  backgroundColor: "#f6f9fc",
-  fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Ubuntu, sans-serif',
-  padding: "20px",
+  backgroundColor: '#f6f9fc',
+  fontFamily:
+    '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Ubuntu, sans-serif',
+  padding: '20px',
 };
 
 const container = {
-  backgroundColor: "#ffffff",
-  margin: "0 auto",
-  padding: "40px",
-  maxWidth: "600px",
-  borderRadius: "8px",
-  boxShadow: "0 2px 8px rgba(0, 0, 0, 0.05)",
+  backgroundColor: '#ffffff',
+  margin: '0 auto',
+  padding: '40px',
+  maxWidth: '600px',
+  borderRadius: '8px',
+  boxShadow: '0 2px 8px rgba(0, 0, 0, 0.05)',
 };
 
 const heading = {
-  fontSize: "28px",
-  lineHeight: "1.3",
-  fontWeight: "700",
-  color: "#3D5A3A",
-  marginBottom: "24px",
-  marginTop: "0",
+  fontSize: '28px',
+  lineHeight: '1.3',
+  fontWeight: '700',
+  color: '#3D5A3A',
+  marginBottom: '24px',
+  marginTop: '0',
 };
 
 const subheading = {
-  fontSize: "22px",
-  lineHeight: "1.3",
-  fontWeight: "600",
-  color: "#3D5A3A",
-  marginTop: "32px",
-  marginBottom: "20px",
+  fontSize: '22px',
+  lineHeight: '1.3',
+  fontWeight: '600',
+  color: '#3D5A3A',
+  marginTop: '32px',
+  marginBottom: '20px',
 };
 
 const paragraph = {
-  fontSize: "16px",
-  lineHeight: "1.6",
-  color: "#525252",
-  marginBottom: "16px",
-  marginTop: "0",
+  fontSize: '16px',
+  lineHeight: '1.6',
+  color: '#525252',
+  marginBottom: '16px',
+  marginTop: '0',
 };
 
 const hr = {
-  border: "none",
-  borderTop: "2px solid #e6ebf1",
-  margin: "32px 0",
+  border: 'none',
+  borderTop: '2px solid #e6ebf1',
+  margin: '32px 0',
 };
 
 const dataSection = {
-  marginBottom: "16px",
+  marginBottom: '16px',
 };
 
 const dataLabel = {
-  fontSize: "14px",
-  fontWeight: "600",
-  color: "#3D5A3A",
-  marginBottom: "6px",
-  marginTop: "16px",
+  fontSize: '14px',
+  fontWeight: '600',
+  color: '#3D5A3A',
+  marginBottom: '6px',
+  marginTop: '16px',
 };
 
 const dataValue = {
-  fontSize: "16px",
-  color: "#525252",
-  margin: "0 0 16px 0",
-  padding: "12px 16px",
-  backgroundColor: "#f6f9fc",
-  borderRadius: "6px",
-  borderLeft: "3px solid #3D5A3A",
+  fontSize: '16px',
+  color: '#525252',
+  margin: '0 0 16px 0',
+  padding: '12px 16px',
+  backgroundColor: '#f6f9fc',
+  borderRadius: '6px',
+  borderLeft: '3px solid #3D5A3A',
 };
 
 const signature = {
-  fontSize: "16px",
-  lineHeight: "1.6",
-  color: "#525252",
-  marginTop: "32px",
-  fontStyle: "italic",
-  marginBottom: "0",
+  fontSize: '16px',
+  lineHeight: '1.6',
+  color: '#525252',
+  marginTop: '32px',
+  fontStyle: 'italic',
+  marginBottom: '0',
 };

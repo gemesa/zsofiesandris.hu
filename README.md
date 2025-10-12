@@ -216,6 +216,12 @@ $ npm run start-dev
 $ npm run start-prod
 ```
 
+### Format
+
+```
+$ npm run format
+```
+
 ### Lint
 
 ```

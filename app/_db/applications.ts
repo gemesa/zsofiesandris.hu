@@ -1,9 +1,9 @@
-"use server";
-import { db } from "@/app/_db/drizzle";
-import { applications } from "@/app/_db/schema";
-import { WeddingApplicationEntry } from "@/app/_lib/types";
+'use server';
+import { db } from '@/app/_db/drizzle';
+import { applications } from '@/app/_db/schema';
+import { WeddingApplicationEntry } from '@/app/_lib/types';
 
-const isTestEnv = process.env.ENV !== "prod";
+const isTestEnv = process.env.ENV !== 'prod';
 
 export const getApplications = async () => {
   const data = (await db.select().from(applications)).filter((entry) => {

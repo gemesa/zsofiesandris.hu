@@ -1,9 +1,9 @@
 'use client';
 import { useState } from 'react';
 
-export default function PhoneNumber({ name, number }: { name: string, number: string }) {
+export default function PhoneNumber({ name, number }: { name: string; number: string }) {
   const [revealed, setRevealed] = useState(false);
-  
+
   return (
     <p className="text-lg font-medium italic font-libre">
       {name}:{' '}

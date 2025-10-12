@@ -1,32 +1,32 @@
-import PHProvider from "@/app/_components/PHProvider";
-import type { Metadata } from "next";
-import { Libre_Baskerville, Playfair_Display } from "next/font/google";
-import { headers } from "next/headers";
-import { Toaster } from "sonner";
-import "./globals.css";
+import PHProvider from '@/app/_components/PHProvider';
+import type { Metadata } from 'next';
+import { Libre_Baskerville, Playfair_Display } from 'next/font/google';
+import { headers } from 'next/headers';
+import { Toaster } from 'sonner';
+import './globals.css';
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: "Zsófi & Andris házasodik",
-    description: "2026. június 13., Alsópetény",
-    metadataBase: new URL(`https://${(await headers()).get("host")}`),
+    title: 'Zsófi & Andris házasodik',
+    description: '2026. június 13., Alsópetény',
+    metadataBase: new URL(`https://${(await headers()).get('host')}`),
   };
 }
 
 const playfair = Playfair_Display({
-  display: "swap",
+  display: 'swap',
   preload: true,
-  subsets: ["latin"],
-  variable: "--font-playfair",
+  subsets: ['latin'],
+  variable: '--font-playfair',
 });
 
 const libre = Libre_Baskerville({
-  display: "swap",
-  style: ["italic", "normal"],
+  display: 'swap',
+  style: ['italic', 'normal'],
   preload: true,
-  subsets: ["latin"],
-  weight: ["400", "700"],
-  variable: "--font-libre",
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-libre',
 });
 
 export default function RootLayout({

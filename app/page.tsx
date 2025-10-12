@@ -1,16 +1,11 @@
-import ApplicationForm from "@/app/_components/ApplicationForm";
-import FAQ from "@/app/_components/FAQ";
-import ImageOverlay from "@/app/_components/ImageOverlay";
-import MainImage from "@/app/_components/MainImage";
-import PhoneNumber from "@/app/_components/PhoneNumber";
-import Section from "@/app/_components/Section";
-import { Separator } from "@radix-ui/react-separator";
-import {
-  BookHeart,
-  CalendarHeart,
-  Heart,
-  MapPinned,
-} from "lucide-react";
+import ApplicationForm from '@/app/_components/ApplicationForm';
+import FAQ from '@/app/_components/FAQ';
+import ImageOverlay from '@/app/_components/ImageOverlay';
+import MainImage from '@/app/_components/MainImage';
+import PhoneNumber from '@/app/_components/PhoneNumber';
+import Section from '@/app/_components/Section';
+import { Separator } from '@radix-ui/react-separator';
+import { BookHeart, CalendarHeart, Heart, MapPinned } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -29,8 +24,8 @@ export default function Home() {
           >
             <div className="flex flex-col gap-6 sm:max-w-[400px]">
               <p className="text-base">
-                Kérjük, részvételi szándékod az alábbi űrlap kitöltésével jelezd
-                2026. március 31-ig!
+                Kérjük, részvételi szándékod az alábbi űrlap kitöltésével jelezd 2026. március
+                31-ig!
               </p>
               <ApplicationForm />
             </div>
@@ -109,9 +104,7 @@ export default function Home() {
         />
         <Section title="Helyszín" icon={<MapPinned className="size-8 pt-1" />}>
           <div className="flex flex-col items-center gap-5 w-full">
-            <p className="text-lg">
-              Prónay-kastély, Alsópetény
-            </p>
+            <p className="text-lg">Prónay-kastély, Alsópetény</p>
             <iframe
               className="h-[400px] sm:w-3/4 border-none rounded-md overflow-hidden"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3251.2975585740905!2d19.245165976772174!3d47.872339669588854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x474028eb9f11df6d%3A0xa602cb928f4011a0!2zUHLDs25heS1rYXN0w6lseQ!5e1!3m2!1sen!2shu!4v1758994368437!5m2!1sen!2shu"

@@ -1,8 +1,8 @@
-"use client";
-import dynamic from "next/dynamic";
-import { FC } from "react";
+'use client';
+import dynamic from 'next/dynamic';
+import { FC } from 'react';
 
-const Counter = dynamic(() => import("@/app/_components/Counter"), {
+const Counter = dynamic(() => import('@/app/_components/Counter'), {
   ssr: false,
 });
 

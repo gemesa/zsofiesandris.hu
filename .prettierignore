@@ -1,0 +1,16 @@
+.github
+.ncurc.json
+README.md
+node_modules
+.next
+out
+dist
+build
+public
+.vercel
+*.config.js
+*.config.ts
+package-lock.json
+package.json
+migrations
+tmp
