@@ -23,8 +23,8 @@ const FAQ: FC = () => {
             Visszajelzés
           </AccordionTrigger>
           <AccordionContent className="text-base sm:text-lg">
-            A visszajelzés határideje 2026. Március 31, jelentkezni a fenti űrlap kitöltésével lehetséges. 
-            Azonban, mivel a vendégházakat külön, publikus oldalon is le lehet foglalni, így amennyiben ott tervezel megszállni, kérünk minél előbb jelezz vissza, hogy biztosan legyen még szabad szoba.
+            A visszajelzés határideje 2026. március 31, jelentkezni a fenti űrlap kitöltésével lehetséges. 
+            Mivel a vendégházakat külön, publikus oldalon is le lehet foglalni, így amennyiben ott tervezel megszállni, kérünk minél előbb jelezz vissza, hogy biztosan legyen még szabad szoba.
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="item-2">
@@ -34,7 +34,7 @@ const FAQ: FC = () => {
           <AccordionContent className="text-base sm:text-lg">
             A Kastélyban 25 standard szállodai szoba található. Az ár a reggelit is tartalmazza.
             <br /><br />
-                  Árak:
+                  <b>Prónay-kastély árak:</b>
             <div className="text-left">
               <ul className="list-disc ml-6 mt-2 space-y-1">
                 <li>3 éves kor alatt ingyenes</li>
@@ -43,7 +43,7 @@ const FAQ: FC = () => {
               </ul>
             </div>
             <br />
-            Ezen kívül, az esküvő helyszínétől néhány perc sétára találhatóak az{" "}
+            Ezenkívül, az esküvő helyszínétől néhány perc sétára találhatóak az{" "}
             <Button
               asChild
               variant="link"
@@ -55,6 +55,7 @@ const FAQ: FC = () => {
             </Button>
             , ahol összesen 22 főt tudunk elszállásolni.
             <br /><br />
+            <b>Alsópetényi Vendgégházak árak:</b>
             A szállodai szobák és a vendégházak foglalása is rajtunk keresztül történik, így kérünk, a formban jelezd, ha itt szeretnél majd megszállni.
           </AccordionContent>
         </AccordionItem>
@@ -63,7 +64,7 @@ const FAQ: FC = () => {
             Dress code
           </AccordionTrigger>
           <AccordionContent className="text-base sm:text-lg">
-            Nyugodtan érkezhetsz bármilyen (elegáns) öltözékben, amiben jól érzed magad, azonban a fehér, piros és fekete színű ruhák kerülését kérjük.
+            Nyugodtan érkezhetsz bármilyen elegáns öltözékben, amiben jól érzed magad, azonban hölgyek esetén a fehér, piros és fekete színű ruhák kerülését kérjük.
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="item-4">
@@ -71,8 +72,7 @@ const FAQ: FC = () => {
             Lemondás
           </AccordionTrigger>
           <AccordionContent className="text-base sm:text-lg">
-            Reméljük, hogy minél többen velünk fogtok ünnepelni a Nagy Napunkon, azonban tudjuk, hogy sajnos bármikor közbejöhet valami.
-            Amennyiben előre kiderül, hogy mégsem tudsz jönni, kérjük legkésőbb az esküvő előtt 15 nappal jelezd, mert utána már nekünk is nagyon nehezen módosítható a létszám.
+            Reméljük, hogy minél többen velünk fogtok ünnepelni, de amennyiben kiderül, hogy mégsem tudsz jönni, kérjük legkésőbb az esküvő előtt 30 nappal jelezd, mert utána már nekünk is nagyon nehezen módosítható a létszám.
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="item-5">
