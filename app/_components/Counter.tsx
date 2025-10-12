@@ -69,7 +69,7 @@ const Counter: FC = () => {
         </div>
       </div>
       <h3 className="font-libre italic font-medium text-lg sm:text-base">
-        2026. Június 13., Alsópetény
+        2026. június 13., Alsópetény
       </h3>
     </div>
   );
