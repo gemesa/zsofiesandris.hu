@@ -55,7 +55,16 @@ const FAQ: FC = () => {
             </Button>
             , ahol összesen 22 főt tudunk elszállásolni.
             <br /><br />
-            <b>Alsópetényi Vendgégházak árak:</b>
+            <b>Alsópetényi Vendégházak árak:</b>
+            <br /><br />
+              <div className="text-left">
+              <ul className="list-disc ml-6 mt-2 space-y-1">
+                <li>Ár1</li>
+                <li>Ár2</li>
+                <li>Ár3</li>
+              </ul>
+            </div>
+            <br /><br />
             A szállodai szobák és a vendégházak foglalása is rajtunk keresztül történik, így kérünk, a formban jelezd, ha itt szeretnél majd megszállni.
           </AccordionContent>
         </AccordionItem>
