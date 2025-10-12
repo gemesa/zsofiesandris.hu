@@ -25,7 +25,7 @@ export default function Home() {
             <div className="flex flex-col gap-6 sm:max-w-[400px]">
               <p className="text-base">
                 Kérjük, részvételi szándékod az alábbi űrlap kitöltésével jelezd 2026. március
-                31-ig!
+                1-ig!
               </p>
               <ApplicationForm />
             </div>

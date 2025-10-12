@@ -20,7 +20,7 @@ const FAQ: FC = () => {
         <AccordionItem value="item-1">
           <AccordionTrigger className="sm:text-xl text-lg w-full">Visszajelzés</AccordionTrigger>
           <AccordionContent className="text-base sm:text-lg">
-            A visszajelzés határideje 2026. március 31, jelentkezni a fenti űrlap kitöltésével
+            A visszajelzés határideje 2026. március 1., jelentkezni a fenti űrlap kitöltésével
             lehetséges. Mivel a vendégházakat külön, publikus oldalon is le lehet foglalni, így
             amennyiben ott tervezel megszállni, kérünk minél előbb jelezz vissza, hogy biztosan
             legyen még szabad szoba.
