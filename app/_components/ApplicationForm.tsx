@@ -288,7 +288,7 @@ const ApplicationForm: FC = () => {
                   <FormItem>
                     <div className="flex items-center justify-between">
                       <FormLabel className="text-base form-medium">
-                        Szállás
+                        Szállás (információk lejjebb)
                       </FormLabel>
                       {field.value && (
                         <Button
