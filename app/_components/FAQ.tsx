@@ -32,7 +32,7 @@ const FAQ: FC = () => {
             Szálláslehetőségek
           </AccordionTrigger>
           <AccordionContent className="text-base sm:text-lg">
-            A  <Link href="https://pronaykastely.hu/hu"> Kastélyban </Link> 25 standard szállodai szoba található. Az ár a reggelit is tartalmazza.
+            A  <Link href="https://pronaykastely.hu/hu" className="text-camouflage-green hover:text-kombu-green transition-colors underline"> Kastélyban </Link> 25 standard szállodai szoba található. Az ár a reggelit is tartalmazza.
             <br /><br />
                   <b>Prónay-kastély árak:</b>
             <div className="text-left">
@@ -44,15 +44,9 @@ const FAQ: FC = () => {
             </div>
             <br />
             Ezenkívül, az esküvő helyszínétől néhány perc sétára találhatóak az{" "}
-            <Button
-              asChild
-              variant="link"
-              className="p-0 h-6 text-base sm:text-lg"
-            >
-              <Link href="https://www.alsopetenyszallas.hu/">
+              <Link href="https://www.alsopetenyszallas.hu/" className="text-camouflage-green hover:text-kombu-green transition-colors underline">
                 Alsópetényi Vendégházak
               </Link>
-            </Button>
             , ahol összesen 22 főt tudunk elszállásolni.
             <br /><br />
             <b>Alsópetényi Vendégházak árak:</b>
