@@ -2,7 +2,7 @@ import ApplicationForm from "@/app/_components/ApplicationForm";
 import FAQ from "@/app/_components/FAQ";
 import ImageOverlay from "@/app/_components/ImageOverlay";
 import MainImage from "@/app/_components/MainImage";
-
+import PhoneNumber from "@/app/_components/PhoneNumber";
 import Section from "@/app/_components/Section";
 import { Separator } from "@radix-ui/react-separator";
 import {
@@ -130,12 +130,8 @@ export default function Home() {
             Kérdés esetén bátran keress minket telefonon vagy Messengeren!
           </h4>
           <div className="flex flex-col gap-2 items-center">
-            <p className="text-lg font-medium italic font-libre">
-              Zsófi: TODO
-            </p>
-            <p className="text-lg font-medium italic font-libre">
-              Andris: TODO
-            </p>
+            <PhoneNumber name="Zsófi" number="+36 20 938 5149" />
+            <PhoneNumber name="Andris" number="+36 70 419 3787" />
           </div>
           <p className="mt-4 flex text-xl font-semibold gap-4 flex-col items-center justify-center">
             Már nagyon várjuk, hogy együtt ünnepeljünk!
