@@ -12,7 +12,7 @@ export const weddingApplicationSchema = z.object({
   midChildren: z.number().min(0, "A szám nem lehet negatív").optional(),
   foodRestrictions: z.string().optional(),
   comment: z.string().optional(),
-  accomodation: z.enum(["szállás0", "szállás1", "szállás2"], {
+  accomodation: z.enum(["prónay", "vendégház", "nem-kell-szallas"], {
     message: "Kérjük, válaszd ki, hogy milyen szállást szeretnél!",
   }).optional(),
 });

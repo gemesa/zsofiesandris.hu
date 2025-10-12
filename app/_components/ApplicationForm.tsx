@@ -312,38 +312,38 @@ const ApplicationForm: FC = () => {
                       >
                         <div className="flex items-center space-x-2">
                           <RadioGroupItem
-                            value="szállás0"
-                            id="szállás0"
+                            value="prónay"
+                            id="prónay"
                             className="border-kombu-green text-kombu-green"
                           />
                           <Label
-                            htmlFor="szállás0"
+                            htmlFor="prónay"
                             className="font-normal cursor-pointer font-libre italic">
-                            szállás0
+                            Prónay-kastély
                           </Label>
                         </div>
                         <div className="flex items-center space-x-2">
                           <RadioGroupItem
-                            value="szállás1"
-                            id="szállás1"
+                            value="vendégház"
+                            id="vendégház"
                             className="border-kombu-green text-kombu-green"
                           />
                           <Label
-                            htmlFor="szállás1"
+                            htmlFor="vendégház"
                             className="font-normal cursor-pointer font-libre italic">
-                            szállás1
+                            Alsópetényi Vendégházak
                           </Label>
                         </div>
                         <div className="flex items-center space-x-2">
                           <RadioGroupItem
-                            value="szállás2"
-                            id="szállás2"
+                            value="nem-kell-szallas"
+                            id="nem-kell-szallas"
                             className="border-kombu-green text-kombu-green"
                           />
                           <Label
-                            htmlFor="szállás2"
+                            htmlFor="nem-kell-szallas"
                             className="font-normal cursor-pointer font-libre italic">
-                            szállás2
+                            Nem kérek szállást
                           </Label>
                         </div>
                       </RadioGroup>
