@@ -31,15 +31,11 @@ const FAQ: FC = () => {
             Szálláslehetőségek
           </AccordionTrigger>
           <AccordionContent className="text-base sm:text-lg">
-            A{' '}
-            <Link
+            A <Link
               href="https://pronaykastely.hu/hu"
               className="text-camouflage-green hover:text-kombu-green transition-colors underline"
-            >
-              {' '}
-              Kastélyban{' '}
-            </Link>{' '}
-            25 standard szállodai szoba található. Az ár a reggelit is tartalmazza.
+            >Kastélyban
+            </Link> 25 standard szállodai szoba található. Az ár a reggelit is tartalmazza.
             <br />
             <br />
             <b>Prónay-kastély árak:</b>
