@@ -64,9 +64,7 @@ const FAQ: FC = () => {
             <br />
             <div className="text-left">
               <ul className="list-disc ml-6 mt-2 space-y-1">
-                <li>Ár1</li>
-                <li>Ár2</li>
-                <li>Ár3</li>
+                <li>Utánajárunk.</li>
               </ul>
             </div>
             <br />
