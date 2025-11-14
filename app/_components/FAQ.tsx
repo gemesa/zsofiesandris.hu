@@ -69,7 +69,7 @@ const FAQ: FC = () => {
               </ul>
             </div>
             <br />
-            <br />Az ár a reggelit is tartalmazza. A szállodai szobák és a vendégházak foglalása is rajtunk keresztül történik, így kérünk, a formban jelezd, ha itt szeretnél majd megszállni.
+            Az ár a reggelit is tartalmazza. A szállodai szobák és a vendégházak foglalása is rajtunk keresztül történik, így kérünk, a formban jelezd, ha itt szeretnél majd megszállni.
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="item-3" className="w-full">
