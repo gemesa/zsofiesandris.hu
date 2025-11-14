@@ -64,12 +64,12 @@ const FAQ: FC = () => {
             <br />
             <div className="text-left">
               <ul className="list-disc ml-6 mt-2 space-y-1">
-                <li>Utánajárunk.</li>
+                <li>Egyágyas elhelyezés: 42.100 Ft/fő/éj</li>
+                <li>Kétágyas elhelyezés: 27.900 Ft/fő/éj</li>
               </ul>
             </div>
             <br />
-            <br />A szállodai szobák és a vendégházak foglalása is rajtunk keresztül történik, így
-            kérünk, a formban jelezd, ha itt szeretnél majd megszállni.
+            <br />Az ár a reggelit is tartalmazza. A szállodai szobák és a vendégházak foglalása is rajtunk keresztül történik, így kérünk, a formban jelezd, ha itt szeretnél majd megszállni.
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="item-3" className="w-full">
