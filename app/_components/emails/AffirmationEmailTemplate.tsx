@@ -59,10 +59,10 @@ const AffirmationEmailTemplate = (props: WeddingApplicationFormData) => {
             </>
           )}
 
-          {props.accomodation && (
+          {props.accommodation && (
             <>
               <p style={dataLabel}>Szállás:</p>
-              <p style={dataValue}>{getAccommodationLabel(props.accomodation)}</p>
+              <p style={dataValue}>{getAccommodationLabel(props.accommodation)}</p>
             </>
           )}
 

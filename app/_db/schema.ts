@@ -9,7 +9,7 @@ export const applications = pgTable('applications', {
   otherGuests: text('otherGuests').default('').notNull(),
   smallChildren: integer('smallChildren').default(0).notNull(),
   midChildren: integer('midChildren').default(0).notNull(),
-  accomodation: text('accomodation').default('').notNull(),
+  accommodation: text('accommodation').default('').notNull(),
   foodRestrictions: text('foodRestrictions').default('').notNull(),
   comment: text('comment').default('').notNull(),
   submittedApplicationAt: timestamp('submittedApplicationAt').notNull().defaultNow(),

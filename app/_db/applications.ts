@@ -25,7 +25,7 @@ export const addApplication = async (application: WeddingApplicationEntry) => {
     otherGuests: application.otherGuests,
     smallChildren: application.smallChildren,
     midChildren: application.midChildren,
-    accomodation: application.accomodation,
+    accommodation: application.accommodation,
     foodRestrictions: application.foodRestrictions,
     comment: application.comment,
     isFromWebsite: true,

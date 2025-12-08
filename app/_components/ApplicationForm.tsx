@@ -48,7 +48,7 @@ const ApplicationForm: FC = () => {
       midChildren: undefined,
       foodRestrictions: '',
       comment: '',
-      accomodation: undefined,
+      accommodation: undefined,
     },
   });
 
@@ -270,7 +270,7 @@ const ApplicationForm: FC = () => {
               />
               <FormField
                 control={applicantForm.control}
-                name="accomodation"
+                name="accommodation"
                 render={({ field }) => (
                   <FormItem>
                     <div className="flex items-center justify-between">
