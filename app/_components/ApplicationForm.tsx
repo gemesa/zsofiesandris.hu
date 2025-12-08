@@ -28,7 +28,7 @@ import { WeddingApplicationFormData, weddingApplicationSchema } from '@/app/_lib
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Loader2Icon } from 'lucide-react';
 import { FC, useState, useTransition } from 'react';
-import { useForm } from 'react-hook-form';
+import { useForm, useWatch } from 'react-hook-form';
 import { toast } from 'sonner';
 
 const ApplicationForm: FC = () => {
@@ -52,7 +52,10 @@ const ApplicationForm: FC = () => {
     },
   });
 
-  const attendanceValue = applicantForm.watch('attendance');
+  const attendanceValue = useWatch({
+    control: applicantForm.control,
+    name: 'attendance',
+  });
 
   const onSubmit = (values: WeddingApplicationFormData) => {
     setPendingFormData(values);

@@ -1,7 +1,9 @@
-const express = require('express');
-const { exec } = require('child_process');
-const crypto = require('crypto');
-require('dotenv').config();
+import express from 'express';
+import { exec } from 'child_process';
+import crypto from 'crypto';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const app = express();
 const SECRET = process.env.WEBHOOK_SECRET;
