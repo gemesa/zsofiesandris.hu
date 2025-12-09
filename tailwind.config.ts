@@ -2,7 +2,7 @@ import type { Config } from "tailwindcss";
 import tailwindcssAnimate from "tailwindcss-animate";
 
 export default {
-  darkMode: ["class"],
+  darkMode: "class",
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -111,7 +111,6 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
     },
-    plugins: [],
   },
   plugins: [tailwindcssAnimate],
 } satisfies Config;
