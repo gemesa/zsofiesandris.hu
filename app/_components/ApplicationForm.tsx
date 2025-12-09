@@ -137,7 +137,7 @@ const ApplicationForm: FC = () => {
                       variant="ghost"
                       size="sm"
                       onClick={() => field.onChange(undefined)}
-                      className="h-auto py-1 px-2 text-xs font-libre italic text-kombu-green hover:text-kombu-green/80 whitespace-nowrap flex-shrink-0"
+                      className="h-auto py-1 px-2 text-xs font-libre italic text-kombu-green hover:text-kombu-green/80 whitespace-nowrap flex-shrink-0 cursor-pointer"
                     >
                       Törlés
                     </Button>
@@ -285,7 +285,7 @@ const ApplicationForm: FC = () => {
                           onClick={() => {
                             field.onChange(undefined);
                           }}
-                          className="h-auto p-1 text-xs font-libre italic text-kombu-green hover:text-kombu-green/80"
+                          className="h-auto p-1 text-xs font-libre italic text-kombu-green hover:text-kombu-green/80 cursor-pointer"
                         >
                           Törlés
                         </Button>
@@ -406,7 +406,7 @@ const ApplicationForm: FC = () => {
           <Button
             type="submit"
             disabled={isPending}
-            className="font-libre font-normal text-lg p-5 #E9BAB5"
+            className="font-libre font-normal text-lg p-5 cursor-pointer #E9BAB5"
           >
             {isPending ? <Loader2Icon className="text-foreground animate-spin" /> : 'Jelentkezem'}
           </Button>
@@ -433,13 +433,13 @@ const ApplicationForm: FC = () => {
           <AlertDialogFooter className="flex-col sm:flex-row gap-2 mt-4">
             <AlertDialogCancel
               onClick={handleCancel}
-              className="font-libre border-2 #E9BAB5 text-kombu-green hover:bg-kombu-green/10 bg-white/60"
+              className="font-libre border-2 #E9BAB5 text-kombu-green hover:bg-kombu-green/10 bg-white/60 cursor-pointer"
             >
               Vissza és javítás
             </AlertDialogCancel>
             <AlertDialogAction
               onClick={handleConfirm}
-              className="#E9BAB5 hover:#E9BAB5/90 font-libre text-base px-6 text-white"
+              className="#E9BAB5 hover:#E9BAB5/90 font-libre text-base px-6 text-white cursor-pointer"
               disabled={isPending}
             >
               {isPending ? <Loader2Icon className="animate-spin" /> : 'Helyes, elküldöm'}

@@ -14,7 +14,7 @@ export default function PhoneNumber({ name, number }: { name: string; number: st
       ) : (
         <button
           onClick={() => setRevealed(true)}
-          className="text-camouflage-green underline hover:text-kombu-green transition-colors"
+          className="text-camouflage-green underline hover:text-kombu-green transition-colors cursor-pointer"
         >
           Telefonszám megjelenítése
         </button>
