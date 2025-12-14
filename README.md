@@ -81,7 +81,7 @@ $ apt update && apt upgrade -y
 $ apt install caddy
 $ # see /etc/caddy/Caddyfile below 
 $ nano /etc/caddy/Caddyfile
-$ sudo -u webapp npm install
+$ sudo -u webapp npm ci
 $ sudo -u webapp npm run build
 $ sudo -u webapp npm install pm2
 $ sudo -u webapp npx pm2 start "npm run start-prod" --name "wedding-app"
@@ -158,7 +158,7 @@ Alternatively, the following commands can be used to pull the changes and rebuil
 ```
 $ sudo -u webapp git fetch
 $ sudo -u webapp git pull
-$ sudo -u webapp npm install
+$ sudo -u webapp npm ci
 $ sudo -u webapp npm run build
 $ sudo -u webapp npx pm2 restart wedding-app
 ```
@@ -166,7 +166,7 @@ $ sudo -u webapp npx pm2 restart wedding-app
 Oneliner:
 
 ```
-$ sudo -u webapp git fetch && sudo -u webapp git pull && sudo -u webapp npm install && sudo -u webapp npm run build && sudo -u webapp npx pm2 restart wedding-app
+$ sudo -u webapp git fetch && sudo -u webapp git pull && sudo -u webapp npm ci && sudo -u webapp npm run build && sudo -u webapp npx pm2 restart wedding-app
 ```
 
 ### References
@@ -179,8 +179,16 @@ $ sudo -u webapp git fetch && sudo -u webapp git pull && sudo -u webapp npm inst
 
 ### Install packages
 
+> Note: Updates `package-lock.json`.
+
 ```
 $ npm install
+```
+
+> Note: Never updates `package-lock.json`.
+
+```
+$ npm ci
 ```
 
 ### Update packages

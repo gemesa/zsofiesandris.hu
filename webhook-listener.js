@@ -47,7 +47,7 @@ app.post('/webhook', (req, res) => {
 
   console.log('Signature validated! Starting deployment...');
 
-  const command = `cd ${REPO_PATH} && git fetch && git pull && npm install && npm run build && npx pm2 restart wedding-app`;
+  const command = `cd ${REPO_PATH} && git fetch && git pull && npm ci && npm run build && npx pm2 restart wedding-app`;
 
   exec(command, (error, stdout, stderr) => {
     console.log('STDOUT:', stdout);
