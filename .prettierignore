@@ -8,8 +8,6 @@ dist
 build
 public
 .vercel
-*.config.js
-*.config.ts
 package-lock.json
 package.json
 migrations
