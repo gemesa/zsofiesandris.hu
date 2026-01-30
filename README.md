@@ -267,3 +267,9 @@ $ sudo journalctl -u caddy -f
 ```
 $ sudo -u webapp npx pm2 logs wedding-app
 ```
+
+### Webhook listener
+
+```
+$ sudo -u webapp npx pm2 logs webhook-listener
+```
