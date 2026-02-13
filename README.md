@@ -193,8 +193,10 @@ $ npm ci
 
 ### Update packages
 
+> Note: we use `eslint` v9 for compatibility. Some packages are not compatible with v10 yet.
+
 ```
-$ npx npm-check-updates -u
+$ npx npm-check-updates -u --reject eslint
 $ npm install
 ```
 
