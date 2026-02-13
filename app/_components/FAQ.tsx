@@ -60,7 +60,7 @@ const FAQ: FC = () => {
             , ahol összesen 22 főt tudunk elszállásolni.
             <br />
             <br />
-            <b>Alsópetényi Vendégházak árak:</b>
+            <b>Alsópetényi Vendégházak árak (megtelt!):</b>
             <br />
             <br />
             <div className="text-left">
