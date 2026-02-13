@@ -21,9 +21,7 @@ const FAQ: FC = () => {
           <AccordionTrigger className="sm:text-xl text-lg w-full">Visszajelzés</AccordionTrigger>
           <AccordionContent className="text-base sm:text-lg">
             A visszajelzés határideje 2026. március 1., jelentkezni a fenti űrlap kitöltésével
-            lehetséges. Mivel a vendégházakat külön, publikus oldalon is le lehet foglalni, így
-            amennyiben ott tervezel megszállni, kérünk minél előbb jelezz vissza, hogy biztosan
-            legyen még szabad szoba.
+            lehetséges.
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="item-2">
@@ -57,7 +55,7 @@ const FAQ: FC = () => {
               href="https://www.alsopetenyszallas.hu/"
               className="text-camouflage-green hover:text-kombu-green transition-colors underline"
             >
-              Alsópetényi Vendégházak
+              Alsópetényi Vendégházak (megtelt!)
             </Link>
             , ahol összesen 22 főt tudunk elszállásolni.
             <br />

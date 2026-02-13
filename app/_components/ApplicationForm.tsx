@@ -315,12 +315,13 @@ const ApplicationForm: FC = () => {
                             value="vendégház"
                             id="vendégház"
                             className="border-kombu-green text-kombu-green"
+                            disabled
                           />
                           <Label
                             htmlFor="vendégház"
-                            className="font-normal cursor-pointer font-libre italic"
+                            className="font-normal cursor-not-allowed font-libre italic text-muted-foreground"
                           >
-                            Alsópetényi Vendégházak
+                            Alsópetényi Vendégházak (megtelt!)
                           </Label>
                         </div>
                         <div className="flex items-center space-x-2">
