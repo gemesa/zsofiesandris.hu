@@ -19,14 +19,9 @@ export default withSentryConfig(nextConfig, {
   sourcemaps: {
     disable: true, // This replaces hideSourceMaps: true
   },
-  webpack: {
-    reactComponentAnnotation: {
+  _experimental: {
+    turbopackReactComponentAnnotation: {
       enabled: true,
     },
-    treeshake: {
-      removeDebugLogging: true,
-    },
-    // Enables automatic instrumentation of Vercel Cron Monitors
-    automaticVercelMonitors: true,
   },
 });
