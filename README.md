@@ -169,6 +169,30 @@ Oneliner:
 $ sudo -u webapp git fetch && sudo -u webapp git pull && sudo -u webapp npm ci && sudo -u webapp npm run build && sudo -u webapp npx pm2 restart wedding-app
 ```
 
+## Decomission
+
+```
+$ cd /opt/zsofiesandris.hu
+$ sudo -u webapp npx pm2 stop wedding-app
+$ sudo -u webapp npx pm2 stop webhook-listener
+$ sudo -u webapp npx pm2 delete wedding-app
+$ sudo -u webapp npx pm2 delete webhook-listener
+$ sudo -u webapp npx pm2 save
+$ systemctl stop caddy
+$ systemctl disable caddy
+```
+
+Then:
+
+- Pause Cloudflare on the domain
+- Delete the PostHog project
+- Disable the Sentry error monitor and the DSN key
+- Delete the Neon DB instance
+- Delete Resend API key
+- Pause UptimeRobot
+- Disable the GitHub webhook
+- Remove the Hostinger firewall rules (port 80, 443, 9000)
+
 ### References
 
 - https://deb.nodesource.com/
